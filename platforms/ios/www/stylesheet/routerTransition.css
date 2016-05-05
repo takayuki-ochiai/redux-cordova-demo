@@ -1,0 +1,10 @@
+/* react-router-transitionはラッパーにはrelative, 中身にはabsoluteのスタイルをつけておかないと、
+ 遷移時のアニメーションがおかしなことになるためそれの対応 */
+.wrapper {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+}
