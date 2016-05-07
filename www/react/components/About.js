@@ -1,6 +1,6 @@
 // modules/About.js
 import React, { Component }  from 'react'
-import NavLink from './NavLink'
+import NavLink from '../containers/NavLink'
 
 class About extends Component {
    constructor(props) {

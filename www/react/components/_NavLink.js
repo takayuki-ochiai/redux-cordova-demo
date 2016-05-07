@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import styles from '../../stylesheet/index.css'
 
-export default class NavLink extends Component {
+export default class _NavLink extends Component {
   constructor(props) {
     super(props)
     this.onClick = this.onClick.bind(this)
@@ -17,7 +17,7 @@ export default class NavLink extends Component {
   }
 }
 
-NavLink.propTypes = {
+_NavLink.propTypes = {
   onClick: PropTypes.func,
   transitionActionType: PropTypes.string
 }

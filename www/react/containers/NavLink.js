@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { setRouterTransition } from '../actions'
-import _NavLink from '../components/NavLink'
+import _NavLink from '../components/_NavLink'
 
 const mapStateToProps = () => {
   return {}

@@ -34,4 +34,4 @@ Transition.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default Transition;
+export default Transition

@@ -20,20 +20,6 @@ class Todo extends Component {
 
 }
 
-
-// Stateless functional components
-// React 0.14からの新機能
-// const Todo = ({ onClick, completed, text }) => (
-//   <li
-//     onClick={onClick}
-//     style={{
-//       textDecoration: completed ? 'line-through' : 'none'
-//     }}
-//   >
-//     {text}
-//   </li>
-// )
-
 Todo.propTypes = {
   onClick: PropTypes.func.isRequired,
   completed: PropTypes.bool.isRequired,
