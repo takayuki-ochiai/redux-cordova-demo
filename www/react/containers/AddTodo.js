@@ -38,7 +38,6 @@ class AddTodo extends Component {
       <div>
         <form onSubmit={this.onSubmit}>
           <TextField value={this.state.value} onChange={this.onChange} hintText="Todoを入力してください" />
-
           <RaisedButton label="Todo追加" type="submit"/>
         </form>
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Footer from './Footer'
+import TodoTabs from '../containers/TodoTabs'
+import Header from './Header'
 import NavLink from '../containers/NavLink'
 import AddTodo from '../containers/AddTodo'
 import VisibleTodoList from '../containers/VisibleTodoList'
@@ -13,12 +14,13 @@ class App extends Component {
   render() {
     return(
       <div style={this.props.style} >
+        <Header />
         <AddTodo />
         <VisibleTodoList />
+        <TodoTabs />
         <NavLink transitionActionType={ROUTER_TRANSITION_ACTIONS.TRANSITION_POP} to="/" onlyActiveOnIndex={true}>Home</NavLink>
         <NavLink transitionActionType={ROUTER_TRANSITION_ACTIONS.TRANSITION_SLIDE_LEFT} to="/about">About</NavLink>
         <NavLink transitionActionType={ROUTER_TRANSITION_ACTIONS.TRANSITION_FADE} to="/motion-practice">MotionPractice</NavLink>
-        <Footer />
       </div>
     )
   }

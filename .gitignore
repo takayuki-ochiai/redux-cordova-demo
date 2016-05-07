@@ -1,1 +1,4 @@
 www/node_modules
+www/dist/*
+!www/dist/index.html
+!www/dist/bundle.js
