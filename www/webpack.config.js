@@ -9,7 +9,8 @@ module.exports = {
   entry: [
     'webpack/hot/dev-server',
     'webpack-hot-middleware/client',
-    './react/main.jsx'
+    './react/main.jsx',
+    './stylesheet/reset.css'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
