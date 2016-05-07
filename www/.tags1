@@ -1,0 +1,9 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+module.exports.debug	/Users/TakayukiOchiai/hybridApp/cordova-react/webpack.config.js	/^module.exports = {$/;"	property	line:5
+module.exports.devtool	/Users/TakayukiOchiai/hybridApp/cordova-react/webpack.config.js	/^  debug: true,$/;"	property	line:6
+module.exports.entry	/Users/TakayukiOchiai/hybridApp/cordova-react/webpack.config.js	/^  devtool: '#eval-source-map',$/;"	property	line:7

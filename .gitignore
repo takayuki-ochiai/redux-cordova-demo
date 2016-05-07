@@ -1,0 +1,7 @@
+www/node_modules
+platforms
+platforms
+platforms
+www/dist/*
+!www/dist/index.html
+!www/dist/bundle.js
