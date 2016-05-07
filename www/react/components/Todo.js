@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import { ListItem }from 'material-ui/List'
+import { ListItem } from 'material-ui/List'
+import styles from '../../stylesheet/todoList.css'
 
 class Todo extends Component {
   constructor(props) {
@@ -8,13 +9,16 @@ class Todo extends Component {
 
   render() {
     return (
-      <ListItem
-        onClick={this.props.onClick}
-        style={{
-          textDecoration: this.props.completed ? 'line-through' : 'none'
-        }}
-        primaryText={this.props.text}
-      />
+      <div className={styles.item}>
+        <ListItem
+          onClick={this.props.onClick}
+          style={{
+            textDecoration: this.props.completed ? 'line-through' : 'none'
+          }}
+          primaryText={this.props.text}
+          secondaryTextLines={1}
+        />
+      </div>
     )
   }
 

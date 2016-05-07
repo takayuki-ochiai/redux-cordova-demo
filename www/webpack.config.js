@@ -10,7 +10,8 @@ module.exports = {
     'webpack/hot/dev-server',
     'webpack-hot-middleware/client',
     './react/main.jsx',
-    './stylesheet/reset.css'
+    './stylesheet/reset.css',
+    './stylesheet/colors.css'
   ],
   output: {
     path: path.join(__dirname, 'dist'),

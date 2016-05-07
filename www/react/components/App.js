@@ -16,9 +16,6 @@ class App extends Component {
         <TodoTabs />
         <AddTodo />
         <VisibleTodoList />
-        <NavLink transitionActionType={ROUTER_TRANSITION_ACTIONS.TRANSITION_FADE} to="/" onlyActiveOnIndex={true}>Home</NavLink>
-        <NavLink transitionActionType={ROUTER_TRANSITION_ACTIONS.TRANSITION_FADE} to="/about">About</NavLink>
-        <NavLink transitionActionType={ROUTER_TRANSITION_ACTIONS.TRANSITION_FADE} to="/motion-practice">MotionPractice</NavLink>
       </div>
     )
   }

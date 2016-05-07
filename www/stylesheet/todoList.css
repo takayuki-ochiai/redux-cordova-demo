@@ -1,0 +1,7 @@
+/*:root {
+  --grey300: #E0E0E0;
+}*/
+
+.item {
+  border-bottom: 1px solid var(--grey300);
+}
