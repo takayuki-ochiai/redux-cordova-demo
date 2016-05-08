@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2792e60d4c959ca22368"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d60ba0eba5795740340a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -62102,6 +62102,8 @@
 	
 	var _Tabs = __webpack_require__(/*! material-ui/Tabs */ 150);
 	
+	var _colors = __webpack_require__(/*! material-ui/styles/colors */ 90);
+	
 	var _actions = __webpack_require__(/*! ../actions */ 48);
 	
 	var _constants = __webpack_require__(/*! ../actions/constants */ 34);
@@ -62113,6 +62115,8 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var greyBackground = { backgroundColor: _colors.grey700 };
 	
 	// stateを聴講しているわけではないし、コンポーネントとしても十分小さいので現状はContainerとComponentは分けない
 	// 今後Componentが肥大化して見通しが悪くなった場合は分離する
@@ -62140,9 +62144,9 @@
 	      return _react2.default.createElement(
 	        _Tabs.Tabs,
 	        null,
-	        _react2.default.createElement(_Tabs.Tab, { label: 'すべて', onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_ALL }),
-	        _react2.default.createElement(_Tabs.Tab, { label: 'のこり', onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_ACTIVE }),
-	        _react2.default.createElement(_Tabs.Tab, { label: '完了', onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_COMPLETED })
+	        _react2.default.createElement(_Tabs.Tab, { label: 'すべて', style: greyBackground, onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_ALL }),
+	        _react2.default.createElement(_Tabs.Tab, { label: 'のこり', style: greyBackground, onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_ACTIVE }),
+	        _react2.default.createElement(_Tabs.Tab, { label: '完了', style: greyBackground, onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_COMPLETED })
 	      );
 	    }
 	  }]);
@@ -62267,6 +62271,8 @@
 	
 	var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 	
+	var _colors = __webpack_require__(/*! material-ui/styles/colors */ 90);
+	
 	var _reducers = __webpack_require__(/*! ./reducers */ 359);
 	
 	var _reducers2 = _interopRequireDefault(_reducers);
@@ -62286,7 +62292,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// Material UIを使用する場合、ReactがV1.0になるまでは必要らしい
-	(0, _reactTapEventPlugin2.default)();
+	
 	
 	// Material UI 用ライブラリ
 	
@@ -62295,7 +62301,7 @@
 	
 	
 	// Redux 用ライブラリ
-	
+	(0, _reactTapEventPlugin2.default)();
 	
 	var Layout = function Layout(props) {
 	  return _react2.default.createElement(_LayoutCtrl2.default, props);
@@ -62315,9 +62321,16 @@
 	  }
 	});
 	
+	var muiTheme = (0, _getMuiTheme2.default)({
+	  palette: {
+	    primary1Color: _colors.indigo700,
+	    accent1Color: _colors.redA200
+	  }
+	});
+	
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _MuiThemeProvider2.default,
-	  { muiTheme: (0, _getMuiTheme2.default)() },
+	  { muiTheme: muiTheme },
 	  _react2.default.createElement(
 	    _reactRedux.Provider,
 	    { store: store },

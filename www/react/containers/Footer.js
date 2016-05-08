@@ -8,7 +8,6 @@ import FloatingActionButton from 'material-ui/FloatingActionButton'
 import styles from '../../stylesheet/footer.css'
 import { transitionNoAnimation, toggleAddTodoComponent } from '../actions/'
 
-
 // stateを聴講しているわけではないし、コンポーネントとしても十分小さいので現状はContainerとComponentは分けない
 // 今後Componentが肥大化して見通しが悪くなった場合は分離する
 class Footer extends Component {

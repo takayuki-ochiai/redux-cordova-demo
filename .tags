@@ -32,11 +32,6 @@ pageTitle	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components
 switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^    switch (true) {$/;"	function	line:18
 render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^  render() {$/;"	function	line:28
 Layout.propTypes.location	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^Layout.propTypes = {$/;"	property	line:50
-constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  constructor(props) {$/;"	function	line:15
-onActiveTab	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  onActiveTab(event) {$/;"	function	line:21
-onTouchTapFab	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  onTouchTapFab() {$/;"	function	line:25
-render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  render() {$/;"	function	line:29
-Footer.propTypes.dispatch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^Footer.propTypes = {$/;"	property	line:46
 :root	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/colors.css	/^:root {$/;"	function	line:1
 constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/TodoForm.js	/^  constructor(props) {$/;"	function	line:16
 state.value	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/TodoForm.js	/^    this.state = {$/;"	property	line:18
@@ -53,3 +48,15 @@ render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Ab
 .item	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/todoList.css	/^.item {$/;"	function	line:1
 .wrapper	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/todoForm.css	/^.wrapper {$/;"	function	line:1
 .container	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/todoForm.css	/^.container {$/;"	function	line:11
+from.backgroundColor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/TodoTabs.js	/^const greyBackground = { backgroundColor: grey700 }$/;"	property	line:8
+constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/TodoTabs.js	/^  constructor(props) {$/;"	function	line:13
+onActive	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/TodoTabs.js	/^  onActive(event) {$/;"	function	line:18
+render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/TodoTabs.js	/^  render() {$/;"	function	line:22
+TodoTabs.propTypes.dispatch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/TodoTabs.js	/^TodoTabs.propTypes = {$/;"	property	line:33
+.container	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/footer.css	/^.container {$/;"	function	line:1
+.fab	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/footer.css	/^.fab {$/;"	function	line:7
+constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  constructor(props) {$/;"	function	line:14
+onActiveTab	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  onActiveTab(event) {$/;"	function	line:20
+onTouchTapFab	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  onTouchTapFab() {$/;"	function	line:24
+render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  render() {$/;"	function	line:28
+Footer.propTypes.dispatch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^Footer.propTypes = {$/;"	property	line:45

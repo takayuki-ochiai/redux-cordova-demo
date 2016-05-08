@@ -15,6 +15,7 @@ import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import injectTapEventPlugin from 'react-tap-event-plugin'
+import { indigo700, redA200 } from 'material-ui/styles/colors'
 
 import todoApp from './reducers'
 import LayoutCtrl from './containers/LayoutCtrl'
@@ -49,8 +50,15 @@ const history = syncHistoryWithStore(hashHistory, store, {
 })
 
 
+const muiTheme = getMuiTheme({
+  palette: {
+    primary1Color: indigo700,
+    accent1Color: redA200
+  }
+})
+
 render(
-  <MuiThemeProvider muiTheme={getMuiTheme()}>
+  <MuiThemeProvider muiTheme={muiTheme}>
     <Provider store={store}>
       <Router history={history}>
         <Route path="/" component={Layout}>
