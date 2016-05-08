@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "306f9fb6f3aedf326149"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ab654d552da8ecd7a0b4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -61724,7 +61724,11 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AddTodo).call(this, props));
 	
 	    _this.state = {
-	      value: ''
+	      value: '',
+	      // TodoForm自体の表示非表示の切り替えに使う。
+	      // this.props.open = trueが渡ってきたタイミングで表示し,
+	      // this.props.open = falseでTodoフォームが下に移動するアニメーションが終了したタイミングで非表示にしたいのでstateとして切り出す
+	      isShow: false
 	    };
 	    _this.onChange = _this.onChange.bind(_this);
 	    _this.onTapCloseIcon = _this.onTapCloseIcon.bind(_this);
@@ -61734,11 +61738,20 @@
 	  }
 	
 	  _createClass(AddTodo, [{
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      if (nextProps.open) {
+	        this.setState({ isShow: true });
+	      }
+	    }
+	  }, {
 	    key: 'onRestSlideTop',
 	    value: function onRestSlideTop() {
 	      // Todoフォームの表示アニメーションが終わった段階で入力フォームにフォーカスする
 	      if (this.props.open) {
 	        this.refs.motion.refs.textField.focus();
+	      } else {
+	        this.setState({ isShow: false });
 	      }
 	    }
 	  }, {
@@ -61779,12 +61792,12 @@
 	
 	      return _react2.default.createElement(
 	        _reactMotion.Motion,
-	        { ref: 'motion', style: { y: (0, _reactMotion.spring)(this.props.open ? 0 : 100) }, onRest: this.onRestSlideTop },
+	        { ref: 'motion', style: { y: (0, _reactMotion.spring)(this.props.open ? 0 : 100, { stiffness: 220, damping: 23 }) }, onRest: this.onRestSlideTop },
 	        function (_ref) {
 	          var y = _ref.y;
 	          return _react2.default.createElement(
 	            'div',
-	            { className: _todoForm2.default.wrapper },
+	            { className: _todoForm2.default.wrapper, style: { display: _this2.state.isShow ? 'inherit' : 'none' } },
 	            _react2.default.createElement(
 	              'div',
 	              { className: _todoForm2.default.container, style: {

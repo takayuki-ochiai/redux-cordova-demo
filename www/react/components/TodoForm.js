@@ -16,7 +16,11 @@ class AddTodo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
+      value: '',
+      // TodoForm自体の表示非表示の切り替えに使う。
+      // this.props.open = trueが渡ってきたタイミングで表示し,
+      // this.props.open = falseでTodoフォームが下に移動するアニメーションが終了したタイミングで非表示にしたいのでstateとして切り出す
+      isShow: false
     }
     this.onChange = this.onChange.bind(this)
     this.onTapCloseIcon = this.onTapCloseIcon.bind(this)
@@ -24,10 +28,18 @@ class AddTodo extends Component {
     this.onRestSlideTop = this.onRestSlideTop.bind(this)
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.open) {
+      this.setState({ isShow: true })
+    }
+  }
+
   onRestSlideTop() {
     // Todoフォームの表示アニメーションが終わった段階で入力フォームにフォーカスする
     if (this.props.open) {
       this.refs.motion.refs.textField.focus()
+    } else {
+      this.setState({ isShow: false })
     }
   }
 
@@ -61,9 +73,9 @@ class AddTodo extends Component {
 
   render() {
     return (
-      <Motion ref="motion" style={{y: spring(this.props.open ? 0 : 100)}} onRest={this.onRestSlideTop} >
+      <Motion ref="motion" style={{y: spring(this.props.open ? 0 : 100, {stiffness: 220, damping: 23})}} onRest={this.onRestSlideTop} >
         {({y}) =>
-          <div className={styles.wrapper} >
+          <div className={styles.wrapper} style={{display: this.state.isShow ? 'inherit' : 'none'}}>
             <div className={styles.container} style={{
               WebkitTransform: `translate3d(0, ${y}%, 0)`,
               transform: `translate3d(0, ${y}%, 0)`
