@@ -6,7 +6,7 @@ import ActionHelp from 'material-ui/svg-icons/action/help'
 import ContentAdd from 'material-ui/svg-icons/content/create'
 import FloatingActionButton from 'material-ui/FloatingActionButton'
 import styles from '../../stylesheet/footer.css'
-import { transitionNoAnimation, toggleAddTodoComponent } from '../actions/'
+import { transitionSlideLeft, toggleAddTodoComponent } from '../actions/'
 
 // stateを聴講しているわけではないし、コンポーネントとしても十分小さいので現状はContainerとComponentは分けない
 // 今後Componentが肥大化して見通しが悪くなった場合は分離する
@@ -18,7 +18,7 @@ class Footer extends Component {
   }
 
   onActiveTab(event) {
-    this.props.dispatch(transitionNoAnimation(event.props.path))
+    this.props.dispatch(transitionSlideLeft(event.props.path))
   }
 
   onTouchTapFab() {

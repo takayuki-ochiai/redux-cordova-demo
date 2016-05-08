@@ -4,3 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  constructor(props) {$/;"	function	line:14
+onActiveTab	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  onActiveTab(event) {$/;"	function	line:20
+onTouchTapFab	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  onTouchTapFab() {$/;"	function	line:24
+render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^  render() {$/;"	function	line:28
+Footer.propTypes.dispatch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/Footer.js	/^Footer.propTypes = {$/;"	property	line:45

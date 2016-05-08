@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d60ba0eba5795740340a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "684f083d8d7ba5f1b4cb"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -61247,6 +61247,16 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _List = __webpack_require__(/*! material-ui/List */ 148);
+	
+	var _Subheader = __webpack_require__(/*! material-ui/Subheader */ 296);
+	
+	var _Subheader2 = _interopRequireDefault(_Subheader);
+	
+	var _Divider = __webpack_require__(/*! material-ui/Divider */ 506);
+	
+	var _Divider2 = _interopRequireDefault(_Divider);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61272,9 +61282,59 @@
 	        'div',
 	        { style: this.props.style },
 	        _react2.default.createElement(
-	          'h2',
+	          _List.List,
 	          null,
-	          'About'
+	          _react2.default.createElement(
+	            _Subheader2.default,
+	            null,
+	            'なにこのアプリ'
+	          ),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: 'SPA構成で作ったHTML5ハイブリッドアプリです。ぶっちゃけただのTodo'
+	          })
+	        ),
+	        _react2.default.createElement(_Divider2.default, null),
+	        _react2.default.createElement(
+	          _List.List,
+	          null,
+	          _react2.default.createElement(
+	            _Subheader2.default,
+	            null,
+	            '原材料'
+	          ),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: 'ハイブリッドアプリ用フレームワーク： Apache Cordova'
+	          }),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: '言語： ECMAScript 2015 + Babel'
+	          }),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: 'ビューライブラリ： React.js'
+	          }),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: '状態管理フレームワーク： Redux'
+	          }),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: 'デザインフレームワーク： Material UI'
+	          }),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: 'ルーティング： react-router'
+	          }),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: 'アニメーション： react-motion'
+	          }),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: 'JSビルド・ホットリロードなど： WebPack'
+	          }),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: 'スタイル： CSS Modules'
+	          }),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: '工期： OTIのゴールデンウィーク'
+	          }),
+	          _react2.default.createElement(_List.ListItem, {
+	            primaryText: 'コスト： ぷらいすれす'
+	          })
 	        )
 	      );
 	    }
@@ -61996,7 +62056,7 @@
 	  _createClass(Footer, [{
 	    key: 'onActiveTab',
 	    value: function onActiveTab(event) {
-	      this.props.dispatch((0, _actions.transitionNoAnimation)(event.props.path));
+	      this.props.dispatch((0, _actions.transitionSlideLeft)(event.props.path));
 	    }
 	  }, {
 	    key: 'onTouchTapFab',
@@ -78161,6 +78221,111 @@
 		}
 	};
 
+
+/***/ },
+/* 503 */,
+/* 504 */,
+/* 505 */
+/*!******************************************!*\
+  !*** ./~/material-ui/Divider/Divider.js ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _simpleAssign = __webpack_require__(/*! simple-assign */ 7);
+	
+	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	var propTypes = {
+	  /**
+	   * The css class name of the root element.
+	   */
+	  className: _react.PropTypes.string,
+	  /**
+	   * If true, the `Divider` will be indented `72px`.
+	   */
+	  inset: _react.PropTypes.bool,
+	  /**
+	   * Override the inline-styles of the root element.
+	   */
+	  style: _react.PropTypes.object
+	};
+	
+	var defaultProps = {
+	  inset: false
+	};
+	
+	var contextTypes = {
+	  muiTheme: _react.PropTypes.object.isRequired
+	};
+	
+	var Divider = function Divider(props, context) {
+	  var inset = props.inset;
+	  var style = props.style;
+	
+	  var other = _objectWithoutProperties(props, ['inset', 'style']);
+	
+	  var muiTheme = context.muiTheme;
+	  var prepareStyles = muiTheme.prepareStyles;
+	
+	
+	  var styles = {
+	    root: {
+	      margin: 0,
+	      marginTop: -1,
+	      marginLeft: inset ? 72 : 0,
+	      height: 1,
+	      border: 'none',
+	      backgroundColor: muiTheme.baseTheme.palette.borderColor
+	    }
+	  };
+	
+	  return _react2.default.createElement('hr', _extends({}, other, { style: prepareStyles((0, _simpleAssign2.default)({}, styles.root, style)) }));
+	};
+	
+	Divider.muiName = 'Divider';
+	Divider.propTypes = propTypes;
+	Divider.defaultProps = defaultProps;
+	Divider.contextTypes = contextTypes;
+	
+	exports.default = Divider;
+
+/***/ },
+/* 506 */
+/*!****************************************!*\
+  !*** ./~/material-ui/Divider/index.js ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = undefined;
+	
+	var _Divider = __webpack_require__(/*! ./Divider */ 505);
+	
+	var _Divider2 = _interopRequireDefault(_Divider);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _Divider2.default;
 
 /***/ }
 /******/ ]);
