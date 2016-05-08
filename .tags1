@@ -4,3 +4,11 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/TodoForm.js	/^  constructor(props) {$/;"	function	line:16
+state.value	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/TodoForm.js	/^    this.state = {$/;"	property	line:18
+onRestSlideTop	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/TodoForm.js	/^  onRestSlideTop() {$/;"	function	line:27
+onChange	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/TodoForm.js	/^  onChange(event) {$/;"	function	line:34
+onTapCloseIcon	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/TodoForm.js	/^  onTapCloseIcon() {$/;"	function	line:40
+onTapDoneIcon	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/TodoForm.js	/^  onTapDoneIcon() {$/;"	function	line:44
+render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/TodoForm.js	/^  render() {$/;"	function	line:62
+AddTodo.propTypes.dispatch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/TodoForm.js	/^AddTodo.propTypes = {$/;"	property	line:87

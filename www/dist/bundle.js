@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "56eac941a00d9e8bc9ab"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "306f9fb6f3aedf326149"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -12888,7 +12888,7 @@
 	
 	
 	// module
-	exports.push([module.id, ":root {\n  --grey300: #E0E0E0;\n}\n", ""]);
+	exports.push([module.id, ":root {\n  --grey300: #E0E0E0;\n  --grey600: #757575;\n  --grey800: #424242;\n  --grey900: #212121;\n}\n", ""]);
 	
 	// exports
 
@@ -12981,7 +12981,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".todoForm__wrapper___3tbJn {\n  border-radius: 4px;\n  /*opacity: 0;*/\n  position: absolute;\n  margin: 0px;\n  width: 100%;\n  height: 100%;\n  /*height: 500px;*/\n}\n.todoForm__container___3oBaR {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 4px;\n  background-color: red;\n  /* Appbarのデフォルトのz-indexが1100のため */\n  z-index: 1101;\n}\n", ""]);
+	exports.push([module.id, ".todoForm__wrapper___3tbJn {\n  border-radius: 4px;\n  /*opacity: 0;*/\n  position: absolute;\n  margin: 0px;\n  width: 100%;\n  height: 100%;\n  /*height: 500px;*/\n}\n.todoForm__container___3oBaR {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 4px;\n  background-color: var(--grey800);\n  /* Appbarのデフォルトのz-indexが1100のため */\n  z-index: 1101;\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -61699,6 +61699,8 @@
 	
 	var _done2 = _interopRequireDefault(_done);
 	
+	var _colors = __webpack_require__(/*! material-ui/styles/colors */ 90);
+	
 	var _actions = __webpack_require__(/*! ../actions */ 48);
 	
 	var _todoForm = __webpack_require__(/*! ../../stylesheet/todoForm.css */ 494);
@@ -61712,10 +61714,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	function handleTouchTap() {
-	  alert('onTouchTap triggered on the title component');
-	}
 	
 	var AddTodo = function (_Component) {
 	  _inherits(AddTodo, _Component);
@@ -61731,10 +61729,19 @@
 	    _this.onChange = _this.onChange.bind(_this);
 	    _this.onTapCloseIcon = _this.onTapCloseIcon.bind(_this);
 	    _this.onTapDoneIcon = _this.onTapDoneIcon.bind(_this);
+	    _this.onRestSlideTop = _this.onRestSlideTop.bind(_this);
 	    return _this;
 	  }
 	
 	  _createClass(AddTodo, [{
+	    key: 'onRestSlideTop',
+	    value: function onRestSlideTop() {
+	      // Todoフォームの表示アニメーションが終わった段階で入力フォームにフォーカスする
+	      if (this.props.open) {
+	        this.refs.motion.refs.textField.focus();
+	      }
+	    }
+	  }, {
 	    key: 'onChange',
 	    value: function onChange(event) {
 	      this.setState({
@@ -61772,7 +61779,7 @@
 	
 	      return _react2.default.createElement(
 	        _reactMotion.Motion,
-	        { style: { y: (0, _reactMotion.spring)(this.props.open ? 0 : 100) } },
+	        { ref: 'motion', style: { y: (0, _reactMotion.spring)(this.props.open ? 0 : 100) }, onRest: this.onRestSlideTop },
 	        function (_ref) {
 	          var y = _ref.y;
 	          return _react2.default.createElement(
@@ -61790,19 +61797,19 @@
 	                  null,
 	                  'Todo追加'
 	                ),
-	                onTitleTouchTap: handleTouchTap,
 	                iconElementLeft: _react2.default.createElement(
 	                  _IconButton2.default,
-	                  { onTouchTap: _this2.onTapCloseIcon },
+	                  { onTouchTap: _this2.onTapCloseIcon, iconStyle: { fill: _colors.red300 } },
 	                  _react2.default.createElement(_close2.default, null)
 	                ),
 	                iconElementRight: _react2.default.createElement(
 	                  _IconButton2.default,
-	                  { onTouchTap: _this2.onTapDoneIcon },
+	                  { onTouchTap: _this2.onTapDoneIcon, iconStyle: { fill: _colors.green300 } },
 	                  _react2.default.createElement(_done2.default, null)
-	                )
+	                ),
+	                style: { backgroundColor: _colors.grey800 }
 	              }),
-	              _react2.default.createElement(_TextField2.default, { value: _this2.state.value, onChange: _this2.onChange, hintText: 'Todoを入力してください' })
+	              _react2.default.createElement(_TextField2.default, { ref: 'textField', value: _this2.state.value, onChange: _this2.onChange, hintText: 'Todoを入力してください', hintStyle: { color: _colors.grey300 }, inputStyle: { color: _colors.white } })
 	            )
 	          );
 	        }

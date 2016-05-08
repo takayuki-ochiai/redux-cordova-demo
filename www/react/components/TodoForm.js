@@ -7,13 +7,10 @@ import AppBar from 'material-ui/AppBar'
 import IconButton from 'material-ui/IconButton'
 import NavigationClose from 'material-ui/svg-icons/navigation/close'
 import ActionDone from 'material-ui/svg-icons/action/done'
+import { grey800, white, grey300, red300, green300 } from 'material-ui/styles/colors'
 
 import { addTodo, toggleAddTodoComponent } from '../actions'
 import styles from '../../stylesheet/todoForm.css'
-
-function handleTouchTap() {
-  alert('onTouchTap triggered on the title component');
-}
 
 class AddTodo extends Component {
   constructor(props) {
@@ -24,6 +21,14 @@ class AddTodo extends Component {
     this.onChange = this.onChange.bind(this)
     this.onTapCloseIcon = this.onTapCloseIcon.bind(this)
     this.onTapDoneIcon = this.onTapDoneIcon.bind(this)
+    this.onRestSlideTop = this.onRestSlideTop.bind(this)
+  }
+
+  onRestSlideTop() {
+    // Todoフォームの表示アニメーションが終わった段階で入力フォームにフォーカスする
+    if (this.props.open) {
+      this.refs.motion.refs.textField.focus()
+    }
   }
 
   onChange(event) {
@@ -56,7 +61,7 @@ class AddTodo extends Component {
 
   render() {
     return (
-      <Motion style={{y: spring(this.props.open ? 0 : 100)}}>
+      <Motion ref="motion" style={{y: spring(this.props.open ? 0 : 100)}} onRest={this.onRestSlideTop} >
         {({y}) =>
           <div className={styles.wrapper} >
             <div className={styles.container} style={{
@@ -66,11 +71,11 @@ class AddTodo extends Component {
 
               <AppBar
                 title={<span>Todo追加</span>}
-                onTitleTouchTap={handleTouchTap}
-                iconElementLeft={<IconButton onTouchTap={this.onTapCloseIcon}><NavigationClose /></IconButton>}
-                iconElementRight={<IconButton onTouchTap={this.onTapDoneIcon}><ActionDone /></IconButton>}
+                iconElementLeft={<IconButton onTouchTap={this.onTapCloseIcon} iconStyle={{fill: red300}}><NavigationClose /></IconButton>}
+                iconElementRight={<IconButton onTouchTap={this.onTapDoneIcon} iconStyle={{fill: green300}}><ActionDone /></IconButton>}
+                style={{ backgroundColor: grey800 }}
               />
-              <TextField value={this.state.value} onChange={this.onChange} hintText="Todoを入力してください" />
+              <TextField ref="textField" value={this.state.value} onChange={this.onChange} hintText="Todoを入力してください" hintStyle={{ color: grey300 }} inputStyle={{ color: white }}/>
             </div>
           </div>
         }
