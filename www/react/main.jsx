@@ -27,9 +27,9 @@ injectTapEventPlugin()
 
 const Layout = props => (
   <LayoutCtrl {...props} />
-);
+)
 
-const loggerMiddleware = createLogger();
+const loggerMiddleware = createLogger()
 
 
 
@@ -40,7 +40,7 @@ let store = createStore(
     loggerMiddleware, // neat middleware that logs actions
     routerMiddleware(hashHistory)
   )
-);
+)
 
 // immutable.jsとreact-router-reduxを併用する場合はselectLocationStateオプションに下記をセットする必要がある
 // redux-immutableを使っていないのでstate.get('routing')ではない

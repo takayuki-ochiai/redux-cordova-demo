@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ab654d552da8ecd7a0b4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2792e60d4c959ca22368"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -12914,25 +12914,7 @@
 	};
 
 /***/ },
-/* 76 */
-/*!**********************************************************************************************************************!*\
-  !*** ./~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./stylesheet/index.css ***!
-  \**********************************************************************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 32)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".index__active___WudDO {\n  color: green;\n}\n", ""]);
-	
-	// exports
-	exports.locals = {
-		"active": "index__active___WudDO"
-	};
-
-/***/ },
+/* 76 */,
 /* 77 */
 /*!**********************************************************************************************************************!*\
   !*** ./~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./stylesheet/reset.css ***!
@@ -12981,7 +12963,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".todoForm__wrapper___3tbJn {\n  border-radius: 4px;\n  /*opacity: 0;*/\n  position: absolute;\n  margin: 0px;\n  width: 100%;\n  height: 100%;\n  /*height: 500px;*/\n}\n.todoForm__container___3oBaR {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 4px;\n  background-color: var(--grey800);\n  /* Appbarのデフォルトのz-indexが1100のため */\n  z-index: 1101;\n}\n", ""]);
+	exports.push([module.id, ".todoForm__wrapper___3tbJn {\n  border-radius: 4px;\n  /*opacity: 0;*/\n  position: absolute;\n  margin: 0px;\n  width: 100%;\n  height: 100%;\n  /* Appbarのデフォルトのz-indexが1100のため */\n  z-index: 1101;\n}\n.todoForm__container___3oBaR {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 4px;\n  background-color: #424242;\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -13001,7 +12983,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".todoList__item___181Yk {\n  border-bottom: 1px solid var(--grey300);\n}\n", ""]);
+	exports.push([module.id, ".todoList__item___181Yk {\n  border-bottom: 1px solid #E0E0E0;\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -61265,10 +61247,6 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _NavLink = __webpack_require__(/*! ../containers/NavLink */ 354);
-	
-	var _NavLink2 = _interopRequireDefault(_NavLink);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61297,21 +61275,6 @@
 	          'h2',
 	          null,
 	          'About'
-	        ),
-	        _react2.default.createElement(
-	          _NavLink2.default,
-	          { to: '/', onlyActiveOnIndex: true },
-	          'Home'
-	        ),
-	        _react2.default.createElement(
-	          _NavLink2.default,
-	          { to: '/about' },
-	          'About'
-	        ),
-	        _react2.default.createElement(
-	          _NavLink2.default,
-	          { to: '/motion-practice' },
-	          'MotionPractice'
 	        )
 	      );
 	    }
@@ -61925,81 +61888,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../~/webpack/buildin/module.js */ 5)(module)))
 
 /***/ },
-/* 350 */
-/*!**************************************!*\
-  !*** ./react/components/_NavLink.js ***!
-  \**************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(/*! ./~/react-hot-api/modules/index.js */ 9), RootInstanceProvider = __webpack_require__(/*! ./~/react-hot-loader/RootInstanceProvider.js */ 10), ReactMount = __webpack_require__(/*! react/lib/ReactMount */ 6), React = __webpack_require__(/*! react */ 2); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-	
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 166);
-	
-	var _index = __webpack_require__(/*! ../../stylesheet/index.css */ 491);
-	
-	var _index2 = _interopRequireDefault(_index);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _NavLink = function (_Component) {
-	  _inherits(_NavLink, _Component);
-	
-	  function _NavLink(props) {
-	    _classCallCheck(this, _NavLink);
-	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(_NavLink).call(this, props));
-	
-	    _this.onClick = _this.onClick.bind(_this);
-	    return _this;
-	  }
-	
-	  _createClass(_NavLink, [{
-	    key: 'onClick',
-	    value: function onClick() {
-	      this.props.onClick();
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(_reactRouter.Link, _extends({}, this.props, { activeClassName: _index2.default.active, onClick: this.onClick }));
-	    }
-	  }]);
-	
-	  return _NavLink;
-	}(_react.Component);
-	
-	exports.default = _NavLink;
-	
-	
-	_NavLink.propTypes = {
-	  onClick: _react.PropTypes.func,
-	  transitionActionType: _react.PropTypes.string
-	};
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(/*! ./~/react-hot-loader/makeExportsHot.js */ 11); if (makeExportsHot(module, __webpack_require__(/*! react */ 2))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "_NavLink.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../~/webpack/buildin/module.js */ 5)(module)))
-
-/***/ },
+/* 350 */,
 /* 351 */
 /*!*************************************!*\
   !*** ./react/containers/AddTodo.js ***!
@@ -62188,50 +62077,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../~/webpack/buildin/module.js */ 5)(module)))
 
 /***/ },
-/* 354 */
-/*!*************************************!*\
-  !*** ./react/containers/NavLink.js ***!
-  \*************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(/*! ./~/react-hot-api/modules/index.js */ 9), RootInstanceProvider = __webpack_require__(/*! ./~/react-hot-loader/RootInstanceProvider.js */ 10), ReactMount = __webpack_require__(/*! react/lib/ReactMount */ 6), React = __webpack_require__(/*! react */ 2); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-	
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _reactRedux = __webpack_require__(/*! react-redux */ 35);
-	
-	var _actions = __webpack_require__(/*! ../actions */ 48);
-	
-	var _NavLink2 = __webpack_require__(/*! ../components/_NavLink */ 350);
-	
-	var _NavLink3 = _interopRequireDefault(_NavLink2);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var mapStateToProps = function mapStateToProps() {
-	  return {};
-	};
-	
-	var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
-	  return {
-	    onClick: function onClick() {
-	      dispatch((0, _actions.setRouterTransition)(ownProps.transitionActionType));
-	    }
-	  };
-	};
-	
-	var NavLink = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_NavLink3.default);
-	
-	exports.default = NavLink;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(/*! ./~/react-hot-loader/makeExportsHot.js */ 11); if (makeExportsHot(module, __webpack_require__(/*! react */ 2))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "NavLink.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../~/webpack/buildin/module.js */ 5)(module)))
-
-/***/ },
+/* 354 */,
 /* 355 */
 /*!**************************************!*\
   !*** ./react/containers/TodoTabs.js ***!
@@ -77648,35 +77494,7 @@
 	}
 
 /***/ },
-/* 491 */
-/*!******************************!*\
-  !*** ./stylesheet/index.css ***!
-  \******************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(/*! !./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./index.css */ 76);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 38)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(true) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept(/*! !./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./index.css */ 76, function() {
-				var newContent = __webpack_require__(/*! !./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./index.css */ 76);
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
+/* 491 */,
 /* 492 */
 /*!******************************!*\
   !*** ./stylesheet/reset.css ***!

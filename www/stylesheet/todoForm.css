@@ -5,14 +5,13 @@
   margin: 0px;
   width: 100%;
   height: 100%;
-  /*height: 500px;*/
+  /* Appbarのデフォルトのz-indexが1100のため */
+  z-index: 1101;
 }
 .container {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  background-color: var(--grey800);
-  /* Appbarのデフォルトのz-indexが1100のため */
-  z-index: 1101;
+  background-color: #424242;
 }
