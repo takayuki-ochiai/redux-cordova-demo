@@ -20,7 +20,6 @@ import todoApp from './reducers'
 import LayoutCtrl from './containers/LayoutCtrl'
 import App from './components/App'
 import About from './components/About'
-import MotionPractice from './components/MotionPractice'
 
 // Material UIを使用する場合、ReactがV1.0になるまでは必要らしい
 injectTapEventPlugin()
@@ -57,7 +56,6 @@ render(
         <Route path="/" component={Layout}>
           <IndexRoute component={App} />
           <Route path="/about" component={About} />
-          <Route path="/motion-practice" component={MotionPractice} />
         </Route>
       </Router>
     </Provider>

@@ -1,9 +1,9 @@
 import React,  { Component, PropTypes } from 'react'
 
 import { RouteTransition } from 'react-router-transition'
-
 import Header from './Header'
 import Footer from '../containers/Footer'
+import AddTodo from '../containers/AddTodo'
 import transitionStyle from '../../stylesheet/routerTransition.css'
 
 // TODO presetだと右スライドと左スライドの感覚がiOSと違うっぽいので修正したほうがいい
@@ -28,6 +28,7 @@ class Layout extends Component {
   render() {
     return (
       <div>
+        <AddTodo />
         <Header title={this.pageTitle()} />
         <RouteTransition
           component={false}
@@ -35,15 +36,16 @@ class Layout extends Component {
           pathname={this.props.location.pathname}
           {...this.props.routerTransition}
         >
-            <div className={transitionStyle.content}>
-              {this.props.children}
-            </div>
+          <div className={transitionStyle.content}>
+            {this.props.children}
+          </div>
         </RouteTransition>
         <Footer />
       </div>
     )
   }
 }
+
 
 Layout.propTypes = {
   location: PropTypes.object.isRequired,

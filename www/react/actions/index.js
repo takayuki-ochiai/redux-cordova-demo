@@ -31,6 +31,12 @@ export const setRouterTransition = type => {
   }
 }
 
+export const toggleAddTodoComponent = () => {
+  return {
+    type: TODO_ACTIONS.TOGGLE_ADD_TODO_COMPONENT
+  }
+}
+
 // 画面遷移用のアクションを発行します
 // どんなアニメーションで遷移するかと、どのURLに遷移するかを指示する２つのアクションを発行する関数です。
 export const transition = (transitionType, path) => {
