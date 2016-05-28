@@ -10,9 +10,11 @@ class Header extends Component {
 
   render() {
     return (
-      <AppBar
-        title={<span>{this.props.title}</span>}
-      />
+      <div id="header">
+        <AppBar
+          title={<span>{this.props.title}</span>}
+        />
+      </div>
     );
   }
 }

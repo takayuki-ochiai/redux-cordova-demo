@@ -6,7 +6,7 @@ import ActionHelp from 'material-ui/svg-icons/action/help'
 import ContentAdd from 'material-ui/svg-icons/content/create'
 import FloatingActionButton from 'material-ui/FloatingActionButton'
 import styles from '../../stylesheet/footer.css'
-import { transitionSlideLeft, toggleAddTodoComponent } from '../actions/'
+import { transitionSlideLeft, transitionSlideRight, toggleAddTodoComponent } from '../actions/'
 
 // stateを聴講しているわけではないし、コンポーネントとしても十分小さいので現状はContainerとComponentは分けない
 // 今後Componentが肥大化して見通しが悪くなった場合は分離する
@@ -14,7 +14,12 @@ class Footer extends Component {
   constructor(props) {
     super(props)
     this.onActiveTab = this.onActiveTab.bind(this)
+    this.onActiveTab2 = this.onActiveTab2.bind(this)
     this.onTouchTapFab = this.onTouchTapFab.bind(this)
+  }
+
+  onActiveTab2(event) {
+    this.props.dispatch(transitionSlideRight(event.props.path))
   }
 
   onActiveTab(event) {
@@ -35,7 +40,7 @@ class Footer extends Component {
         </div>
         <Tabs>
           <Tab icon={<ActionHome />} onActive={this.onActiveTab} path="/" />
-          <Tab icon={<ActionHelp />} onActive={this.onActiveTab} path="/about" />
+          <Tab icon={<ActionHelp />} onActive={this.onActiveTab2} path="/about" />
         </Tabs>
       </div>
     );

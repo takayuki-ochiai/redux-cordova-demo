@@ -33,31 +33,34 @@ class About extends Component {
           <ListItem
             primaryText="状態管理フレームワーク： Redux"
           />
-          <ListItem
-            primaryText="デザインフレームワーク： Material UI"
-          />
-          <ListItem
-            primaryText="ルーティング： react-router"
-          />
-          <ListItem
-            primaryText="アニメーション： react-motion"
-          />
-          <ListItem
-            primaryText="JSビルド・ホットリロードなど： WebPack"
-          />
-          <ListItem
-            primaryText="スタイル： CSS Modules"
-          />
-          <ListItem
-            primaryText="工期： OTIのゴールデンウィーク"
-          />
-          <ListItem
-            primaryText="コスト： ぷらいすれす"
-          />
+
         </List>
       </div>
     )
   }
+
 }
+
+{/*<ListItem
+  primaryText="デザインフレームワーク： Material UI"
+/>
+<ListItem
+  primaryText="ルーティング： react-router"
+/>
+<ListItem
+  primaryText="アニメーション： react-motion"
+/>
+<ListItem
+  primaryText="JSビルド・ホットリロードなど： WebPack"
+/>
+<ListItem
+  primaryText="スタイル： CSS Modules"
+/>
+<ListItem
+  primaryText="工期： OTIのゴールデンウィーク"
+/>
+<ListItem
+  primaryText="コスト： ぷらいすれす"
+/>*/}
 
 export default About
