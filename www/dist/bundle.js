@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "41640df1368a6bad15dc"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3bea2d092b4411c560ec"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -61382,14 +61382,6 @@
 	
 	var _AppBar2 = _interopRequireDefault(_AppBar);
 	
-	var _IconButton = __webpack_require__(/*! material-ui/IconButton */ 59);
-	
-	var _IconButton2 = _interopRequireDefault(_IconButton);
-	
-	var _create = __webpack_require__(/*! material-ui/svg-icons/content/create */ 152);
-	
-	var _create2 = _interopRequireDefault(_create);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61480,8 +61472,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	// TODO presetだと右スライドと左スライドの感覚がiOSと違うっぽいので修正したほうがいい
 	
 	var Layout = function (_Component) {
 	  _inherits(Layout, _Component);
@@ -62103,73 +62093,15 @@
 	  value: true
 	});
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 40);
 	
-	var _Tabs = __webpack_require__(/*! material-ui/Tabs */ 150);
+	var _TodoTabs2 = __webpack_require__(/*! ../components/_TodoTabs */ 504);
 	
-	var _colors = __webpack_require__(/*! material-ui/styles/colors */ 38);
-	
-	var _actions = __webpack_require__(/*! ../actions */ 62);
-	
-	var _constants = __webpack_require__(/*! ../actions/constants */ 33);
+	var _TodoTabs3 = _interopRequireDefault(_TodoTabs2);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var greyBackground = { backgroundColor: _colors.grey700 };
-	
-	// stateを聴講しているわけではないし、コンポーネントとしても十分小さいので現状はContainerとComponentは分けない
-	// 今後Componentが肥大化して見通しが悪くなった場合は分離する
-	
-	var TodoTabs = function (_Component) {
-	  _inherits(TodoTabs, _Component);
-	
-	  function TodoTabs(props) {
-	    _classCallCheck(this, TodoTabs);
-	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TodoTabs).call(this, props));
-	
-	    _this.onActive = _this.onActive.bind(_this);
-	    return _this;
-	  }
-	
-	  _createClass(TodoTabs, [{
-	    key: 'onActive',
-	    value: function onActive(event) {
-	      this.props.dispatch((0, _actions.setVisibilityFilter)(event.props.filter));
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        _Tabs.Tabs,
-	        null,
-	        _react2.default.createElement(_Tabs.Tab, { label: 'すべて', style: greyBackground, onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_ALL }),
-	        _react2.default.createElement(_Tabs.Tab, { label: 'のこり', style: greyBackground, onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_ACTIVE }),
-	        _react2.default.createElement(_Tabs.Tab, { label: '完了', style: greyBackground, onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_COMPLETED })
-	      );
-	    }
-	  }]);
-	
-	  return TodoTabs;
-	}(_react.Component);
-	
-	TodoTabs.propTypes = {
-	  dispatch: _react.PropTypes.func.isRequired
-	};
-	
-	exports.default = (0, _reactRedux.connect)()(TodoTabs);
+	exports.default = (0, _reactRedux.connect)()(_TodoTabs3.default);
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(/*! ./~/react-hot-loader/makeExportsHot.js */ 11); if (makeExportsHot(module, __webpack_require__(/*! react */ 2))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TodoTabs.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../~/webpack/buildin/module.js */ 6)(module)))
@@ -78488,6 +78420,92 @@
 	(0, _reactRouterRedux.routerMiddleware)(_reactRouter.hashHistory)));
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(/*! ./~/react-hot-loader/makeExportsHot.js */ 11); if (makeExportsHot(module, __webpack_require__(/*! react */ 2))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../~/webpack/buildin/module.js */ 6)(module)))
+
+/***/ },
+/* 503 */,
+/* 504 */
+/*!***************************************!*\
+  !*** ./react/components/_TodoTabs.js ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(/*! ./~/react-hot-api/modules/index.js */ 9), RootInstanceProvider = __webpack_require__(/*! ./~/react-hot-loader/RootInstanceProvider.js */ 10), ReactMount = __webpack_require__(/*! react/lib/ReactMount */ 8), React = __webpack_require__(/*! react */ 2); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Tabs = __webpack_require__(/*! material-ui/Tabs */ 150);
+	
+	var _colors = __webpack_require__(/*! material-ui/styles/colors */ 38);
+	
+	var _actions = __webpack_require__(/*! ../actions */ 62);
+	
+	var _constants = __webpack_require__(/*! ../actions/constants */ 33);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var greyBackground = { backgroundColor: _colors.grey700 };
+	
+	// stateを聴講しているわけではないし、コンポーネントとしても十分小さいので現状はContainerとComponentは分けない
+	// 今後Componentが肥大化して見通しが悪くなった場合は分離する
+	
+	var TodoTabs = function (_Component) {
+	  _inherits(TodoTabs, _Component);
+	
+	  function TodoTabs(props) {
+	    _classCallCheck(this, TodoTabs);
+	
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TodoTabs).call(this, props));
+	
+	    _this.onActive = _this.onActive.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(TodoTabs, [{
+	    key: 'onActive',
+	    value: function onActive(event) {
+	      this.props.dispatch((0, _actions.setVisibilityFilter)(event.props.filter));
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        _Tabs.Tabs,
+	        null,
+	        _react2.default.createElement(_Tabs.Tab, { label: 'すべて', style: greyBackground, onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_ALL }),
+	        _react2.default.createElement(_Tabs.Tab, { label: 'のこり', style: greyBackground, onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_ACTIVE }),
+	        _react2.default.createElement(_Tabs.Tab, { label: '完了', style: greyBackground, onActive: this.onActive, filter: _constants.TODO_FILETER_ACTIONS.SHOW_COMPLETED })
+	      );
+	    }
+	  }]);
+	
+	  return TodoTabs;
+	}(_react.Component);
+	
+	exports.default = TodoTabs;
+	
+	
+	TodoTabs.propTypes = {
+	  dispatch: _react.PropTypes.func.isRequired
+	};
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(/*! ./~/react-hot-loader/makeExportsHot.js */ 11); if (makeExportsHot(module, __webpack_require__(/*! react */ 2))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "_TodoTabs.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../~/webpack/buildin/module.js */ 6)(module)))
 
 /***/ }

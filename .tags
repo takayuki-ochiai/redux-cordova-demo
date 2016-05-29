@@ -1,6 +1,3 @@
-module.exports.debug	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/webpack.config.js	/^module.exports = {$/;"	property	line:5
-module.exports.devtool	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/webpack.config.js	/^  debug: true,$/;"	property	line:6
-module.exports.entry	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/webpack.config.js	/^  devtool: '#eval-source-map',$/;"	property	line:7
 constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Todo.js	/^  constructor(props) {$/;"	function	line:6
 render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Todo.js	/^  render() {$/;"	function	line:10
 Todo.propTypes.onClick	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Todo.js	/^Todo.propTypes = {$/;"	property	line:27
@@ -38,11 +35,6 @@ AddTodo.propTypes.dispatch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www
 .item	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/todoList.css	/^.item {$/;"	function	line:1
 .wrapper	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/todoForm.css	/^.wrapper {$/;"	function	line:1
 .container	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/todoForm.css	/^.container {$/;"	function	line:11
-from.backgroundColor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/TodoTabs.js	/^const greyBackground = { backgroundColor: grey700 }$/;"	property	line:8
-constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/TodoTabs.js	/^  constructor(props) {$/;"	function	line:13
-onActive	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/TodoTabs.js	/^  onActive(event) {$/;"	function	line:18
-render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/TodoTabs.js	/^  render() {$/;"	function	line:22
-TodoTabs.propTypes.dispatch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/containers/TodoTabs.js	/^TodoTabs.propTypes = {$/;"	property	line:33
 from.stiffness	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/utils/thunkTransition.js	/^const fadeConfig = { stiffness: 200, damping: 22 }$/;"	property	line:4
 from.damping	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/utils/thunkTransition.js	/^const fadeConfig = { stiffness: 200, damping: 22 }$/;"	property	line:4
 const.stiffness	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/utils/thunkTransition.js	/^const popConfig = { stiffness: 360, damping: 25 }$/;"	property	line:5
@@ -59,13 +51,6 @@ constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/componen
 render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/App.js	/^  render() {$/;"	function	line:13
 .wrapper	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/routerTransition.css	/^.wrapper {$/;"	function	line:3
 .content	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/routerTransition.css	/^.content {$/;"	function	line:7
-constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Header.js	/^  constructor(props) {$/;"	function	line:7
-render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Header.js	/^  render() {$/;"	function	line:11
-constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^  constructor(props) {$/;"	function	line:11
-pageTitle	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^  pageTitle() {$/;"	function	line:16
-switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^    switch (true) {$/;"	function	line:18
-render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^  render() {$/;"	function	line:28
-Layout.propTypes.location	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^Layout.propTypes = {$/;"	property	line:50
 constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/About.js	/^   constructor(props) {$/;"	function	line:8
 render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/About.js	/^  render() {$/;"	function	line:12
 from.stiffness	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/utils/transitionPresets.js	/^const fadeConfig = { stiffness: 200, damping: 22 }$/;"	property	line:3
@@ -85,13 +70,36 @@ const.atEnter	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/utils/
 mapStyles	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/utils/transitionPresets.js	/^  mapStyles(styles) {$/;"	function	line:104
 .container	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/footer.css	/^.container {$/;"	function	line:1
 .fab	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/stylesheet/footer.css	/^.fab {$/;"	function	line:8
+switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/reducers/routerTransition.js	/^  switch (action.type) {$/;"	function	line:7
+switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/reducers/visibilityFilter.js	/^  switch (action.type) {$/;"	function	line:5
+switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/reducers/todos.js	/^  switch (action.type) {$/;"	function	line:8
+switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/reducers/todos.js	/^  switch (action.type) {$/;"	function	line:26
+constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^  constructor(props) {$/;"	function	line:10
+pageTitle	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^  pageTitle() {$/;"	function	line:15
+switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^    switch (true) {$/;"	function	line:17
+render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^  render() {$/;"	function	line:27
+Layout.propTypes.location	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Layout.js	/^Layout.propTypes = {$/;"	property	line:49
+constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Header.js	/^  constructor(props) {$/;"	function	line:5
+render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Header.js	/^  render() {$/;"	function	line:9
+from.backgroundColor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/_TodoTabs.js	/^const greyBackground = { backgroundColor: grey700 }$/;"	property	line:7
+constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/_TodoTabs.js	/^  constructor(props) {$/;"	function	line:12
+onActive	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/_TodoTabs.js	/^  onActive(event) {$/;"	function	line:17
+render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/_TodoTabs.js	/^  render() {$/;"	function	line:21
+TodoTabs.propTypes.dispatch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/_TodoTabs.js	/^TodoTabs.propTypes = {$/;"	property	line:32
+module.exports.debug	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/webpack.config.js	/^module.exports = {$/;"	property	line:5
+module.exports.devtool	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/webpack.config.js	/^  debug: true,$/;"	property	line:6
+module.exports.entry	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/webpack.config.js	/^  devtool: '#eval-source-map',$/;"	property	line:7
+from.backgroundColor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoTabs.js	/^const greyBackground = { backgroundColor: grey700 }$/;"	property	line:8
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoTabs.js	/^        <Tab label="すべて" style={greyBackground} onActive={function noRefCheck() {}} filter={TODO_FILETER_ACTIONS.SHOW_ALL} \/>$/;"	function	line:25
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoTabs.js	/^        <Tab label="のこり" style={greyBackground} onActive={function noRefCheck() {}} filter={TODO_FILETER_ACTIONS.SHOW_ACTIVE} \/>$/;"	function	line:26
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoTabs.js	/^        <Tab label="完了" style={greyBackground} onActive={function noRefCheck() {}} filter={TODO_FILETER_ACTIONS.SHOW_COMPLETED} \/>$/;"	function	line:27
 name	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "name": "cordova-react",$/;"	function	line:2
 version	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "version": "1.0.0",$/;"	function	line:3
 description	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "description": "cordova-react",$/;"	function	line:4
 main	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "main": "index.js",$/;"	function	line:5
 scripts	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "scripts": {$/;"	function	line:6
 start	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "start": "webpack --watch -d & node server.js",$/;"	function	line:7
-test	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "test": "mocha --compilers js:babel-register --recursive",$/;"	function	line:8
+test	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "test": "mocha --require .\/test\/setup.js --compilers js:babel-register --recursive",$/;"	function	line:8
 test:watch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "test:watch": "npm test -- --watch"$/;"	function	line:9
 author	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "author": "",$/;"	function	line:11
 license	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "license": "ISC",$/;"	function	line:12
@@ -102,34 +110,41 @@ babel-preset-es2015	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/packag
 babel-preset-react	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "babel-preset-react": "^6.5.0",$/;"	function	line:17
 babel-register	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "babel-register": "^6.9.0",$/;"	function	line:18
 browser-sync	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "browser-sync": "^2.12.5",$/;"	function	line:19
-css-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "css-loader": "^0.23.1",$/;"	function	line:20
-eslint	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "eslint": "^2.9.0",$/;"	function	line:21
-eslint-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "eslint-loader": "^1.3.0",$/;"	function	line:22
-eslint-plugin-react	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "eslint-plugin-react": "^5.0.1",$/;"	function	line:23
-gulp	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "gulp": "^3.9.1",$/;"	function	line:24
-gulp-webpack	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "gulp-webpack": "^1.5.0",$/;"	function	line:25
-mocha	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "mocha": "^2.5.3",$/;"	function	line:26
-react-hot-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-hot-loader": "^1.3.0",$/;"	function	line:27
-redux-devtools	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-devtools": "^3.2.0",$/;"	function	line:28
-style-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "style-loader": "^0.13.1",$/;"	function	line:29
-webpack	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "webpack": "^1.13.0",$/;"	function	line:30
-webpack-dev-middleware	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "webpack-dev-middleware": "^1.6.1",$/;"	function	line:31
-webpack-hot-middleware	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "webpack-hot-middleware": "^2.10.0"$/;"	function	line:32
-dependencies	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "dependencies": {$/;"	function	line:34
-immutable	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "immutable": "^3.8.1",$/;"	function	line:35
-material-ui	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "material-ui": "^0.15.0",$/;"	function	line:36
-react	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react": "^15.0.2",$/;"	function	line:37
-react-dom	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-dom": "^15.0.2",$/;"	function	line:38
-react-motion	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-motion": "^0.4.3",$/;"	function	line:39
-react-redux	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-redux": "^4.4.5",$/;"	function	line:40
-react-router	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-router": "^2.4.0",$/;"	function	line:41
-react-router-redux	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-router-redux": "^4.0.4",$/;"	function	line:42
-react-router-transition	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-router-transition": "0.0.5",$/;"	function	line:43
-react-tap-event-plugin	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-tap-event-plugin": "^1.0.0",$/;"	function	line:44
-redux	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux": "^3.5.2",$/;"	function	line:45
-redux-logger	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-logger": "^2.6.1",$/;"	function	line:46
-redux-thunk	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-thunk": "^2.0.1"$/;"	function	line:47
-switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/reducers/routerTransition.js	/^  switch (action.type) {$/;"	function	line:7
-switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/reducers/visibilityFilter.js	/^  switch (action.type) {$/;"	function	line:5
-switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/reducers/todos.js	/^  switch (action.type) {$/;"	function	line:8
-switch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/reducers/todos.js	/^  switch (action.type) {$/;"	function	line:26
+chai	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "chai": "^3.5.0",$/;"	function	line:20
+css-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "css-loader": "^0.23.1",$/;"	function	line:21
+css-modules-require-hook	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "css-modules-require-hook": "^4.0.1",$/;"	function	line:22
+eslint	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "eslint": "^2.9.0",$/;"	function	line:23
+eslint-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "eslint-loader": "^1.3.0",$/;"	function	line:24
+eslint-plugin-react	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "eslint-plugin-react": "^5.0.1",$/;"	function	line:25
+expect	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "expect": "^1.20.1",$/;"	function	line:26
+expect-jsx	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "expect-jsx": "^2.5.1",$/;"	function	line:27
+gulp	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "gulp": "^3.9.1",$/;"	function	line:28
+gulp-webpack	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "gulp-webpack": "^1.5.0",$/;"	function	line:29
+mocha	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "mocha": "^2.5.3",$/;"	function	line:30
+react-addons-test-utils	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-addons-test-utils": "^15.1.0",$/;"	function	line:31
+react-hot-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-hot-loader": "^1.3.0",$/;"	function	line:32
+redux-devtools	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-devtools": "^3.2.0",$/;"	function	line:33
+redux-mock-store	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-mock-store": "^1.0.4",$/;"	function	line:34
+sinon	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "sinon": "^1.17.4",$/;"	function	line:35
+style-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "style-loader": "^0.13.1",$/;"	function	line:36
+webpack	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "webpack": "^1.13.0",$/;"	function	line:37
+webpack-dev-middleware	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "webpack-dev-middleware": "^1.6.1",$/;"	function	line:38
+webpack-hot-middleware	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "webpack-hot-middleware": "^2.10.0"$/;"	function	line:39
+dependencies	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "dependencies": {$/;"	function	line:41
+immutable	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "immutable": "^3.8.1",$/;"	function	line:42
+material-ui	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "material-ui": "^0.15.0",$/;"	function	line:43
+react	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react": "^15.1.0",$/;"	function	line:44
+react-dom	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-dom": "^15.1.0",$/;"	function	line:45
+react-motion	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-motion": "^0.4.3",$/;"	function	line:46
+react-redux	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-redux": "^4.4.5",$/;"	function	line:47
+react-router	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-router": "^2.4.0",$/;"	function	line:48
+react-router-redux	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-router-redux": "^4.0.4",$/;"	function	line:49
+react-router-transition	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-router-transition": "0.0.5",$/;"	function	line:50
+react-tap-event-plugin	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-tap-event-plugin": "^1.0.0",$/;"	function	line:51
+redux	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux": "^3.5.2",$/;"	function	line:52
+redux-logger	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-logger": "^2.6.1",$/;"	function	line:53
+redux-thunk	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-thunk": "^2.0.1"$/;"	function	line:54
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^      <TodoList todos={todos} onClick={function noRefCheck() {}} \/>$/;"	function	line:22
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^      <TodoList todos={todos} onClick={function noRefCheck() {}} \/>$/;"	function	line:50
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^          onClick={function noRefCheck() {}}$/;"	function	line:62
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^          onClick={function noRefCheck() {}}$/;"	function	line:68

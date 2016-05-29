@@ -6,7 +6,6 @@ import Footer from '../containers/Footer'
 import AddTodo from '../containers/AddTodo'
 import transitionStyle from '../../stylesheet/routerTransition.css'
 
-// TODO presetだと右スライドと左スライドの感覚がiOSと違うっぽいので修正したほうがいい
 class Layout extends Component {
   constructor(props) {
     super(props)
