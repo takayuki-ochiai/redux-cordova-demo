@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "40ef49d672bca00a43af"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "41640df1368a6bad15dc"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -11736,18 +11736,22 @@
 	var transitionPop = exports.transitionPop = function transitionPop(path) {
 	  return transition(_constants.ROUTER_TRANSITION_ACTIONS.TRANSITION_POP, path);
 	};
+	
 	// fadeアニメーションで画面遷移するアクションを発行します
 	var transitionFade = exports.transitionFade = function transitionFade(path) {
 	  return transition(_constants.ROUTER_TRANSITION_ACTIONS.TRANSITION_FADE, path);
 	};
+	
 	// slideLeftアニメーションで画面遷移するアクションを発行します
 	var transitionSlideLeft = exports.transitionSlideLeft = function transitionSlideLeft(path) {
 	  return transition(_constants.ROUTER_TRANSITION_ACTIONS.TRANSITION_SLIDE_LEFT, path);
 	};
+	
 	// slideRightアニメーションで画面遷移するアクションを発行します
 	var transitionSlideRight = exports.transitionSlideRight = function transitionSlideRight(path) {
 	  return transition(_constants.ROUTER_TRANSITION_ACTIONS.TRANSITION_SLIDE_RIGHT, path);
 	};
+	
 	// アニメーションなしで画面遷移するアクションを発行します
 	var transitionNoAnimation = exports.transitionNoAnimation = function transitionNoAnimation(path) {
 	  return transition(_constants.ROUTER_TRANSITION_ACTIONS.TRANSITION_NO_ANIMATION, path);
@@ -62470,8 +62474,9 @@
 	
 	var _constants = __webpack_require__(/*! ../actions/constants */ 33);
 	
+	var initialState = false;
 	var isOpenAddTodo = function isOpenAddTodo() {
-	  var state = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
+	  var state = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];
 	  var action = arguments[1];
 	
 	  if (action.type === _constants.TODO_ACTIONS.TOGGLE_ADD_TODO_COMPONENT) {
@@ -62545,7 +62550,7 @@
 	  value: true
 	});
 	
-	var _transitionPresets = __webpack_require__(/*! ../utils/transitionPresets.js */ 501);
+	var _transitionPresets = __webpack_require__(/*! ../utils/transitionPresets */ 501);
 	
 	var _transitionPresets2 = _interopRequireDefault(_transitionPresets);
 	
@@ -62553,8 +62558,10 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	var initialAnimation = _transitionPresets2.default.noAnimation;
+	
 	var routerTransition = function routerTransition() {
-	  var state = arguments.length <= 0 || arguments[0] === undefined ? _transitionPresets2.default.noAnimation : arguments[0];
+	  var state = arguments.length <= 0 || arguments[0] === undefined ? initialAnimation : arguments[0];
 	  var action = arguments[1];
 	
 	  switch (action.type) {
@@ -62661,8 +62668,9 @@
 	
 	var _constants = __webpack_require__(/*! ../actions/constants */ 33);
 	
+	var initialState = _constants.TODO_FILETER_ACTIONS.SHOW_ALL;
 	var visibilityFilter = function visibilityFilter() {
-	  var state = arguments.length <= 0 || arguments[0] === undefined ? 'SHOW_ALL' : arguments[0];
+	  var state = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];
 	  var action = arguments[1];
 	
 	  switch (action.type) {

@@ -1,8 +1,9 @@
-import { default as presets } from '../utils/transitionPresets.js'
+import { default as presets } from '../utils/transitionPresets'
 import { ROUTER_TRANSITION_ACTIONS } from '../actions/constants'
 
+const initialAnimation = presets.noAnimation
 
-const routerTransition = (state = presets.noAnimation, action) => {
+const routerTransition = (state = initialAnimation, action) => {
   switch (action.type) {
     case ROUTER_TRANSITION_ACTIONS.TRANSITION_FADE:
       return presets.fade

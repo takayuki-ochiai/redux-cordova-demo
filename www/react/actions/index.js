@@ -27,7 +27,7 @@ export const toggleTodo = id => {
 
 export const setRouterTransition = type => {
   return {
-    type: type
+    type
   }
 }
 
@@ -52,18 +52,22 @@ export const transition = (transitionType, path) => {
 export const transitionPop = path => {
   return transition(ROUTER_TRANSITION_ACTIONS.TRANSITION_POP, path)
 }
+
 // fadeアニメーションで画面遷移するアクションを発行します
 export const transitionFade = path => {
   return transition(ROUTER_TRANSITION_ACTIONS.TRANSITION_FADE, path)
 }
+
 // slideLeftアニメーションで画面遷移するアクションを発行します
 export const transitionSlideLeft = path => {
   return transition(ROUTER_TRANSITION_ACTIONS.TRANSITION_SLIDE_LEFT, path)
 }
+
 // slideRightアニメーションで画面遷移するアクションを発行します
 export const transitionSlideRight = path => {
   return transition(ROUTER_TRANSITION_ACTIONS.TRANSITION_SLIDE_RIGHT, path)
 }
+
 // アニメーションなしで画面遷移するアクションを発行します
 export const transitionNoAnimation = path => {
   return transition(ROUTER_TRANSITION_ACTIONS.TRANSITION_NO_ANIMATION, path)
