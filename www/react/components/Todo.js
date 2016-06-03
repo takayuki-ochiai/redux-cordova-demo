@@ -21,7 +21,6 @@ class Todo extends Component {
       </div>
     )
   }
-
 }
 
 Todo.propTypes = {

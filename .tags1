@@ -4,7 +4,13 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^      <TodoList todos={todos} onClick={function noRefCheck() {}} \/>$/;"	function	line:22
-noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^      <TodoList todos={todos} onClick={function noRefCheck() {}} \/>$/;"	function	line:50
-noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^          onClick={function noRefCheck() {}}$/;"	function	line:62
-noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^          onClick={function noRefCheck() {}}$/;"	function	line:68
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^      <Motion ref="motion" style={{y: spring(100, {stiffness: 220, damping: 23})}} onRest={function noRefCheck() {}} >$/;"	function	line:43
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^                iconElementLeft={<IconButton onTouchTap={function noRefCheck() {}} iconStyle={{fill: red300}}><NavigationClose \/><\/IconButton>}$/;"	function	line:53
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^                iconElementRight={<IconButton onTouchTap={function noRefCheck() {}} iconStyle={{fill: green300}}><ActionDone \/><\/IconButton>}$/;"	function	line:54
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^              <TextField ref="textField" value={''} onChange={function noRefCheck() {}} hintText="Todoを入力してください" hintStyle={{ color: grey300 }} inputStyle={{ color: white }}\/>$/;"	function	line:57
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^      <Motion ref="motion" style={{y: spring(0, {stiffness: 220, damping: 23})}} onRest={function noRefCheck() {}} >$/;"	function	line:76
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^                iconElementLeft={<IconButton onTouchTap={function noRefCheck() {}} iconStyle={{fill: red300}}><NavigationClose \/><\/IconButton>}$/;"	function	line:86
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^                iconElementRight={<IconButton onTouchTap={function noRefCheck() {}} iconStyle={{fill: green300}}><ActionDone \/><\/IconButton>}$/;"	function	line:87
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^              <TextField ref="textField" value={''} onChange={function noRefCheck() {}} hintText="Todoを入力してください" hintStyle={{ color: grey300 }} inputStyle={{ color: white }}\/>$/;"	function	line:90
+constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^      constructor(props) {$/;"	function	line:105
+render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^      render() {$/;"	function	line:109

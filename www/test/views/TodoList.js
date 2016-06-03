@@ -1,8 +1,7 @@
 import React from 'react'
-import expect from 'expect'
-import { createRenderer } from 'react-addons-test-utils'
-import expectJSX from 'expect-jsx'
-expect.extend(expectJSX)
+import { shallow } from 'enzyme'
+import chai from 'chai'
+const expect = chai.expect
 
 import { List as ImmutableList } from 'immutable'
 import { List }from 'material-ui/List'
@@ -10,26 +9,17 @@ import { List }from 'material-ui/List'
 import TodoList from '../../react/components/TodoList'
 import Todo from '../../react/reducers/entities/Todo'
 
-
-// https://gist.github.com/mmrko/288d159a55adf1916f71
-//https://github.com/tarciosaraiva/tasker-react/blob/ddc5f33502fb22a40c0fb102cde2138295446819/test/utils/specHelper.js
-describe('Header', () => {
-  let renderer = createRenderer()
+describe('TodoList', () => {
+  let todos = ImmutableList([])
+  Todo.displayName = 'Todo'
   it('Todoがないケース', () => {
-    const todos = ImmutableList([])
 
-    renderer.render(
-      <TodoList todos={todos} onClick={function noRefCheck() {}} />
+    const wrapper = shallow(
+      <TodoList todos={todos} />
     )
 
-    let resultElement = renderer.getRenderOutput()
-    let expectedElement = (
-      <List>
-      </List>
-    )
-
-
-    expect(resultElement).toEqualJSX(expectedElement)
+    expect(wrapper.find(List)).to.have.length(1)
+    expect(wrapper.find('Todo')).to.have.length(0)
   })
 
   it('Todoが２つあるケース', () => {
@@ -44,32 +34,16 @@ describe('Header', () => {
     })
 
 
-    const todos = ImmutableList([]).push(firstTodo).push(secondTodo)
+    todos = todos.push(firstTodo).push(secondTodo)
 
-    renderer.render(
-      <TodoList todos={todos} onClick={function noRefCheck() {}} />
+    const wrapper = shallow(
+      <TodoList todos={todos} />
     )
 
-    let resultElement = renderer.getRenderOutput()
-
-
-    let expectedElement = (
-      <List>
-        <Todo
-          key={firstTodo.id}
-          completed={firstTodo.completed}
-          text={firstTodo.text}
-          onClick={function noRefCheck() {}}
-        />
-        <Todo
-          key={secondTodo.id}
-          completed={secondTodo.completed}
-          text={secondTodo.text}
-          onClick={function noRefCheck() {}}
-        />
-      </List>
-    )
-
-    expect(resultElement).toEqualJSX(expectedElement)
+    console.log(wrapper.find(List).childAt(0).node.props.text)
+    expect(wrapper.find(List)).to.have.length(1)
+    expect(wrapper.find(List).childAt(0).node.props.text).equal('First Todo')
+    expect(wrapper.find(List).childAt(1).node.props.text).equal('Second Todo')
+    expect(wrapper.find('Todo')).to.have.length(2)
   })
 })

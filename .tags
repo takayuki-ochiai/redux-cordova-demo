@@ -1,6 +1,3 @@
-constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Todo.js	/^  constructor(props) {$/;"	function	line:6
-render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Todo.js	/^  render() {$/;"	function	line:10
-Todo.propTypes.onClick	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Todo.js	/^Todo.propTypes = {$/;"	property	line:27
 export.ADD_TODO	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/actions/constants.js	/^export const TODO_ACTIONS = {$/;"	property	line:2
 export.TOGGLE_TODO	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/actions/constants.js	/^  ADD_TODO: 'ADD_TODO',$/;"	property	line:3
 export.TOGGLE_ADD_TODO_COMPONENT	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/actions/constants.js	/^  TOGGLE_TODO: 'TOGGLE_TODO',$/;"	property	line:4
@@ -93,7 +90,48 @@ from.backgroundColor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/
 noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoTabs.js	/^        <Tab label="すべて" style={greyBackground} onActive={function noRefCheck() {}} filter={TODO_FILETER_ACTIONS.SHOW_ALL} \/>$/;"	function	line:25
 noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoTabs.js	/^        <Tab label="のこり" style={greyBackground} onActive={function noRefCheck() {}} filter={TODO_FILETER_ACTIONS.SHOW_ACTIVE} \/>$/;"	function	line:26
 noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoTabs.js	/^        <Tab label="完了" style={greyBackground} onActive={function noRefCheck() {}} filter={TODO_FILETER_ACTIONS.SHOW_COMPLETED} \/>$/;"	function	line:27
+constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Todo.js	/^  constructor(props) {$/;"	function	line:6
+render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Todo.js	/^  render() {$/;"	function	line:10
+Todo.propTypes.onClick	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/react/components/Todo.js	/^Todo.propTypes = {$/;"	property	line:26
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/Todo.js	/^        onClick={function noRefCheck() {}}$/;"	function	line:26
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/Todo.js	/^          onClick={function noRefCheck() {}}$/;"	function	line:34
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/Todo.js	/^        onClick={function noRefCheck() {}}$/;"	function	line:60
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/Todo.js	/^          onClick={function noRefCheck() {}}$/;"	function	line:68
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^      <TodoList todos={todos} onClick={function noRefCheck() {}} \/>$/;"	function	line:19
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^      <TodoList todos={todos} onClick={function noRefCheck() {}} \/>$/;"	function	line:47
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^          onClick={function noRefCheck() {}}$/;"	function	line:59
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^          onClick={function noRefCheck() {}}$/;"	function	line:65
 name	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "name": "cordova-react",$/;"	function	line:2
+version	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "version": "1.0.0",$/;"	function	line:3
+description	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "description": "cordova-react",$/;"	function	line:4
+main	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "main": "index.js",$/;"	function	line:5
+scripts	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "scripts": {$/;"	function	line:6
+start	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "start": "webpack --watch -d & node server.js",$/;"	function	line:7
+test	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "test": "mocha --require .\/test\/setup.js --compilers js:babel-register --recursive",$/;"	function	line:8
+test:watch	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "test:watch": "npm test -- --watch"$/;"	function	line:9
+author	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "author": "",$/;"	function	line:11
+license	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "license": "ISC",$/;"	function	line:12
+devDependencies	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "devDependencies": {$/;"	function	line:13
+babel-core	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "babel-core": "^6.7.7",$/;"	function	line:14
+babel-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "babel-loader": "^6.2.4",$/;"	function	line:15
+babel-preset-es2015	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "babel-preset-es2015": "^6.6.0",$/;"	function	line:16
+babel-preset-react	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "babel-preset-react": "^6.5.0",$/;"	function	line:17
+babel-register	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "babel-register": "^6.9.0",$/;"	function	line:18
+browser-sync	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "browser-sync": "^2.12.5",$/;"	function	line:19
+chai	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "chai": "^3.5.0",$/;"	function	line:20
+css-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "css-loader": "^0.23.1",$/;"	function	line:21
+css-modules-require-hook	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "css-modules-require-hook": "^4.0.1",$/;"	function	line:22
+eslint	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "eslint": "^2.9.0",$/;"	function	line:23
+eslint-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "eslint-loader": "^1.3.0",$/;"	function	line:24
+eslint-plugin-react	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "eslint-plugin-react": "^5.0.1",$/;"	function	line:25
+expect	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "expect": "^1.20.1",$/;"	function	line:26
+expect-jsx	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "expect-jsx": "^2.5.1",$/;"	function	line:27
+gulp	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "gulp": "^3.9.1",$/;"	function	line:28
+gulp-webpack	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "gulp-webpack": "^1.5.0",$/;"	function	line:29
+mocha	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "mocha": "^2.5.3",$/;"	function	line:30
+react-addons-test-utils	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-addons-test-utils": "^15.1.0",$/;"	function	line:31
+react-hot-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-hot-loader": "^1.3.0",$/;"	function	line:32
+redux-devtools	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-devtools": "^3.2.name	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "name": "cordova-react",$/;"	function	line:2
 version	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "version": "1.0.0",$/;"	function	line:3
 description	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "description": "cordova-react",$/;"	function	line:4
 main	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "main": "index.js",$/;"	function	line:5
@@ -144,7 +182,35 @@ react-tap-event-plugin	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/pac
 redux	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux": "^3.5.2",$/;"	function	line:52
 redux-logger	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-logger": "^2.6.1",$/;"	function	line:53
 redux-thunk	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-thunk": "^2.0.1"$/;"	function	line:54
-noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^      <TodoList todos={todos} onClick={function noRefCheck() {}} \/>$/;"	function	line:22
-noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^      <TodoList todos={todos} onClick={function noRefCheck() {}} \/>$/;"	function	line:50
-noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^          onClick={function noRefCheck() {}}$/;"	function	line:62
-noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoList.js	/^          onClick={function noRefCheck() {}}$/;"	function	line:68
+0",$/;"	function	line:33
+redux-mock-store	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-mock-store": "^1.0.4",$/;"	function	line:34
+sinon	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "sinon": "^1.17.4",$/;"	function	line:35
+style-loader	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "style-loader": "^0.13.1",$/;"	function	line:36
+webpack	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "webpack": "^1.13.0",$/;"	function	line:37
+webpack-dev-middleware	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "webpack-dev-middleware": "^1.6.1",$/;"	function	line:38
+webpack-hot-middleware	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "webpack-hot-middleware": "^2.10.0"$/;"	function	line:39
+dependencies	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^  "dependencies": {$/;"	function	line:41
+immutable	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "immutable": "^3.8.1",$/;"	function	line:42
+material-ui	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "material-ui": "^0.15.0",$/;"	function	line:43
+react	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react": "^15.1.0",$/;"	function	line:44
+react-dom	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-dom": "^15.1.0",$/;"	function	line:45
+react-motion	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-motion": "^0.4.3",$/;"	function	line:46
+react-redux	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-redux": "^4.4.5",$/;"	function	line:47
+react-router	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-router": "^2.4.0",$/;"	function	line:48
+react-router-redux	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-router-redux": "^4.0.4",$/;"	function	line:49
+react-router-transition	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-router-transition": "0.0.5",$/;"	function	line:50
+react-tap-event-plugin	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "react-tap-event-plugin": "^1.0.0",$/;"	function	line:51
+redux	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux": "^3.5.2",$/;"	function	line:52
+redux-logger	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-logger": "^2.6.1",$/;"	function	line:53
+redux-thunk	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/package.json	/^    "redux-thunk": "^2.0.1"$/;"	function	line:54
+propagateToGlobal	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/setup.js	/^function propagateToGlobal (window) {$/;"	function	line:22
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^      <Motion ref="motion" style={{y: spring(100, {stiffness: 220, damping: 23})}} onRest={function noRefCheck() {}} >$/;"	function	line:43
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^                iconElementLeft={<IconButton onTouchTap={function noRefCheck() {}} iconStyle={{fill: red300}}><NavigationClose \/><\/IconButton>}$/;"	function	line:53
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^                iconElementRight={<IconButton onTouchTap={function noRefCheck() {}} iconStyle={{fill: green300}}><ActionDone \/><\/IconButton>}$/;"	function	line:54
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^              <TextField ref="textField" value={''} onChange={function noRefCheck() {}} hintText="Todoを入力してください" hintStyle={{ color: grey300 }} inputStyle={{ color: white }}\/>$/;"	function	line:57
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^      <Motion ref="motion" style={{y: spring(0, {stiffness: 220, damping: 23})}} onRest={function noRefCheck() {}} >$/;"	function	line:76
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^                iconElementLeft={<IconButton onTouchTap={function noRefCheck() {}} iconStyle={{fill: red300}}><NavigationClose \/><\/IconButton>}$/;"	function	line:86
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^                iconElementRight={<IconButton onTouchTap={function noRefCheck() {}} iconStyle={{fill: green300}}><ActionDone \/><\/IconButton>}$/;"	function	line:87
+noRefCheck	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^              <TextField ref="textField" value={''} onChange={function noRefCheck() {}} hintText="Todoを入力してください" hintStyle={{ color: grey300 }} inputStyle={{ color: white }}\/>$/;"	function	line:90
+constructor	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^      constructor(props) {$/;"	function	line:105
+render	/Users/TakayukiOchiai/hybridApp/cordova/kansyasai/www/test/views/TodoForm.js	/^      render() {$/;"	function	line:109
