@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4ce5f3becb939629a109"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e77e534124862a3b4440"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -13422,10 +13422,16 @@
 	
 	
 	// module
-	exports.push([module.id, ":root {\n  --grey300: #E0E0E0;\n  --grey600: #757575;\n  --grey800: #424242;\n  --grey900: #212121;\n}\n", ""]);
+	exports.push([module.id, "\n", ""]);
 	
 	// exports
-
+	exports.locals = {
+		"grey300": "#E0E0E0",
+		"grey600": "#757575",
+		"grey800": "#424242",
+		"grey900": "#212121",
+		"white": "white"
+	};
 
 /***/ },
 /* 75 */
@@ -13473,13 +13479,15 @@
 
 	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 36)();
 	// imports
-	
+	exports.i(__webpack_require__(/*! -!./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./colors.css */ 74), undefined);
 	
 	// module
-	exports.push([module.id, "/* react-router-transitionはラッパーにはrelative, 中身にはabsoluteのスタイルをつけておかないと、\n 遷移時のアニメーションがおかしなことになるためそれの対応 */\n.routerTransition__wrapper___3XIAd {\n  position: relative;\n}\n\n.routerTransition__content___12ztz {\n  position: absolute;\n  width: 100%;\n  background-color: white;\n}\n", ""]);
+	exports.push([module.id, "/* react-router-transitionはラッパーにはrelative, 中身にはabsoluteのスタイルをつけておかないと、\n 遷移時のアニメーションがおかしなことになるためそれの対応 */\n.routerTransition__wrapper___3XIAd {\n  position: relative;\n}\n\n.routerTransition__content___12ztz {\n  position: absolute;\n  width: 100%;\n  background-color: " + __webpack_require__(/*! -!./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./colors.css */ 74).locals["white"] + ";\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
+		"colors": "\"./colors.css\"",
+		"white": "" + __webpack_require__(/*! -!./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./colors.css */ 74).locals["white"] + "",
 		"wrapper": "routerTransition__wrapper___3XIAd",
 		"content": "routerTransition__content___12ztz"
 	};
@@ -13493,13 +13501,15 @@
 
 	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 36)();
 	// imports
-	
+	exports.i(__webpack_require__(/*! -!./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./colors.css */ 74), undefined);
 	
 	// module
-	exports.push([module.id, ".todoForm__wrapper___3tbJn {\n  border-radius: 4px;\n  /*opacity: 0;*/\n  position: absolute;\n  margin: 0px;\n  width: 100%;\n  height: 100%;\n  /* Appbarのデフォルトのz-indexが1100のため */\n  z-index: 1101;\n}\n.todoForm__container___3oBaR {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 4px;\n  background-color: #424242;\n}\n", ""]);
+	exports.push([module.id, ".todoForm__wrapper___3tbJn {\n  border-radius: 4px;\n  /*opacity: 0;*/\n  position: absolute;\n  margin: 0px;\n  width: 100%;\n  height: 100%;\n  /* Appbarのデフォルトのz-indexが1100のため */\n  z-index: 1101;\n}\n.todoForm__container___3oBaR {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 4px;\n  background-color: " + __webpack_require__(/*! -!./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./colors.css */ 74).locals["grey800"] + ";\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
+		"colors": "\"./colors.css\"",
+		"grey800": "" + __webpack_require__(/*! -!./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./colors.css */ 74).locals["grey800"] + "",
 		"wrapper": "todoForm__wrapper___3tbJn",
 		"container": "todoForm__container___3oBaR"
 	};
@@ -13513,13 +13523,15 @@
 
 	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 36)();
 	// imports
-	
+	exports.i(__webpack_require__(/*! -!./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./colors.css */ 74), undefined);
 	
 	// module
-	exports.push([module.id, ".todoList__item___181Yk {\n  border-bottom: 1px solid #E0E0E0;\n}\n", ""]);
+	exports.push([module.id, ".todoList__item___181Yk {\n  border-bottom: 1px solid " + __webpack_require__(/*! -!./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./colors.css */ 74).locals["grey300"] + ";\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
+		"colors": "\"./colors.css\"",
+		"grey300": "" + __webpack_require__(/*! -!./../~/css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!./colors.css */ 74).locals["grey300"] + "",
 		"item": "todoList__item___181Yk"
 	};
 
