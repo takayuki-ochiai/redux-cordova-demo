@@ -8,11 +8,11 @@ const todo = (state, action) => {
   switch (action.type) {
     case TODO_ACTIONS.ADD_TODO:
       return Todo.fromJS({
-        id: action.id,
-        text: action.text
+        id: action.payload.id,
+        text: action.payload.text
       })
     case TODO_ACTIONS.TOGGLE_TODO:
-      if (state.id !== action.id) {
+      if (state.id !== action.payload.id) {
         return state
       }
       return state.set('completed', !state.completed)

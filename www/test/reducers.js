@@ -11,6 +11,7 @@ import routing from '../react/reducers/router'
 
 import { TODO_ACTIONS, TODO_FILETER_ACTIONS, ROUTER_TRANSITION_ACTIONS }  from '../react/actions/constants'
 import { default as presets } from '../react/utils/transitionPresets'
+import { addTodo, setVisibilityFilter, toggleTodo, setRouterTransition, toggleAddTodoComponent, transition } from '../react/actions'
 
 const expect = chai.expect
 
@@ -22,10 +23,8 @@ describe('reducers', () => {
     })
 
     it('SET_VISIBILITY_FILTER', () => {
-      const action = {
-        type: TODO_FILETER_ACTIONS.SET_VISIBILITY_FILTER,
-        filter: TODO_FILETER_ACTIONS.SHOW_COMPLETED
-      }
+      const filter = TODO_FILETER_ACTIONS.SHOW_COMPLETED
+      const action = setVisibilityFilter(filter)
 
       expect(visibilityFilter(undefined, action)).equal(TODO_FILETER_ACTIONS.SHOW_COMPLETED)
     })
@@ -44,17 +43,12 @@ describe('reducers', () => {
     })
 
     it('ADD_TODO', () => {
-      let nextTodoId = 0
       const firstText = 'First Todo'
-      const firstAction = {
-        type: TODO_ACTIONS.ADD_TODO,
-        id: nextTodoId++,
-        text: firstText
-      }
+      const firstAction = addTodo(firstText)
 
       const firstTodo = Todo.fromJS({
-        id: firstAction.id,
-        text: firstAction.text
+        id: firstAction.payload.id,
+        text: firstAction.payload.text
       })
 
       let resultStateList = todos(initialStateList, firstAction)
@@ -65,15 +59,11 @@ describe('reducers', () => {
 
       // 2つ目のTodo追加
       const secondText = 'Second Todo'
-      const secondAction = {
-        type: TODO_ACTIONS.ADD_TODO,
-        id: nextTodoId++,
-        text: secondText
-      }
+      const secondAction = addTodo(secondText)
 
       const secondTodo = Todo.fromJS({
-        id: secondAction.id,
-        text: secondAction.text
+        id: secondAction.payload.id,
+        text: secondAction.payload.text
       })
 
       resultStateList = todos(expectStateList, secondAction)
@@ -85,20 +75,18 @@ describe('reducers', () => {
 
     it('TOGGLE_TODO', () => {
       const firstText = 'First Todo'
-      const addAction = {
-        type: TODO_ACTIONS.ADD_TODO,
-        id: 0,
-        text: firstText
-      }
+      const addAction = addTodo(firstText)
 
       const firstTodo = Todo.fromJS({
-        id: addAction.id,
-        text: addAction.text
+        id: addAction.payload.id,
+        text: addAction.payload.text
       })
 
       const toggleTodoAction = {
         type: TODO_ACTIONS.TOGGLE_TODO,
-        id: 0
+        payload: {
+          id: addAction.payload.id
+        }
       }
 
       const todoList = initialStateList.push(firstTodo)
@@ -128,7 +116,8 @@ describe('reducers', () => {
     })
 
     it('default', () => {
-      expect(isOpenAddTodo(initialState, { type: TODO_FILETER_ACTIONS.SHOW_COMPLETED })).equal(initialState)
+      expect(isOpenAddTodo(false, { type: TODO_FILETER_ACTIONS.SHOW_COMPLETED })).equal(false)
+      expect(isOpenAddTodo(true, { type: TODO_FILETER_ACTIONS.SHOW_COMPLETED })).equal(true)
     })
   })
 

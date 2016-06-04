@@ -11,74 +11,47 @@ const expect = chai.expect
 
 describe('actions', () => {
   it('addTodo', () => {
-    let nextTodoId = 0
     const firstText = 'First Todo'
-    const firstExpectedAction = {
-      type: TODO_ACTIONS.ADD_TODO,
-      id: nextTodoId++,
-      text: firstText
-    }
 
     const firstResultAction = addTodo(firstText)
-    expect(firstResultAction.type).equal(firstExpectedAction.type)
-    expect(firstResultAction.id).equal(firstExpectedAction.id)
-    expect(firstResultAction.text).equal(firstExpectedAction.text)
+    expect(firstResultAction.type).equal(TODO_ACTIONS.ADD_TODO)
+    expect(firstResultAction.payload.id).equal(0)
+    expect(firstResultAction.payload.text).equal('First Todo')
 
     const secondText = 'Second Todo'
-    const secondExpectedAction = {
-      type: TODO_ACTIONS.ADD_TODO,
-      id: nextTodoId++,
-      text: secondText
-    }
 
     const secondResultAction = addTodo(secondText)
-    expect(secondResultAction.type).equal(secondExpectedAction.type)
-    expect(secondResultAction.id).equal(secondExpectedAction.id)
-    expect(secondResultAction.text).equal(secondExpectedAction.text)
+    expect(secondResultAction.type).equal(TODO_ACTIONS.ADD_TODO)
+    expect(secondResultAction.payload.id).equal(1)
+    expect(secondResultAction.payload.text).equal('Second Todo')
   })
 
   it('setVisibilityFilter', () => {
     const filter = TODO_FILETER_ACTIONS.SHOW_ALL
     const resultAction = setVisibilityFilter(filter)
-    const expectedAction = {
-      type: TODO_FILETER_ACTIONS.SET_VISIBILITY_FILTER,
-      filter
-    }
 
-    expect(resultAction.type).equal(expectedAction.type)
-    expect(resultAction.filter).equal(expectedAction.filter)
+    expect(resultAction.type).equal(TODO_FILETER_ACTIONS.SET_VISIBILITY_FILTER)
+    expect(resultAction.payload.filter).equal(TODO_FILETER_ACTIONS.SHOW_ALL)
   })
 
   it('toggleTodo', () => {
     const id = 0
     const resultAction = toggleTodo(id)
 
-    const expectedAction = {
-      type: TODO_ACTIONS.TOGGLE_TODO,
-      id
-    }
-
-    expect(resultAction.type).equal(expectedAction.type)
-    expect(resultAction.id).equal(expectedAction.id)
+    expect(resultAction.type).equal(TODO_ACTIONS.TOGGLE_TODO)
+    expect(resultAction.payload.id).equal(id)
   })
 
 
   it('setRouterTransition', () => {
     const resultAction = setRouterTransition(ROUTER_TRANSITION_ACTIONS.TRANSITION_SLIDE_LEFT)
-    const expectedAction = {
-      type: ROUTER_TRANSITION_ACTIONS.TRANSITION_SLIDE_LEFT
-    }
-
-    expect(resultAction.type).equal(expectedAction.type)
+    expect(resultAction.type).equal(ROUTER_TRANSITION_ACTIONS.TRANSITION_SLIDE_LEFT)
   })
 
   it('toggleAddTodoComponent', () => {
     const resultAction = toggleAddTodoComponent()
-    const expectedAction = {
-      type: TODO_ACTIONS.TOGGLE_ADD_TODO_COMPONENT
-    }
 
-    expect(resultAction.type).equal(expectedAction.type)
+    expect(resultAction.type).equal(TODO_ACTIONS.TOGGLE_ADD_TODO_COMPONENT)
   })
 
   it('transition', () => {

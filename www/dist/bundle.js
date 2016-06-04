@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "5ad44f03c89d2f2e59ca"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4ce5f3becb939629a109"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -11787,22 +11787,28 @@
 	var addTodo = exports.addTodo = function addTodo(text) {
 	  return {
 	    type: _constants.TODO_ACTIONS.ADD_TODO,
-	    id: nextTodoId++,
-	    text: text
+	    payload: {
+	      id: nextTodoId++,
+	      text: text
+	    }
 	  };
 	};
 	
 	var setVisibilityFilter = exports.setVisibilityFilter = function setVisibilityFilter(filter) {
 	  return {
 	    type: _constants.TODO_FILETER_ACTIONS.SET_VISIBILITY_FILTER,
-	    filter: filter
+	    payload: {
+	      filter: filter
+	    }
 	  };
 	};
 	
 	var toggleTodo = exports.toggleTodo = function toggleTodo(id) {
 	  return {
 	    type: _constants.TODO_ACTIONS.TOGGLE_TODO,
-	    id: id
+	    payload: {
+	      id: id
+	    }
 	  };
 	};
 	
@@ -41566,11 +41572,11 @@
 	  switch (action.type) {
 	    case _constants.TODO_ACTIONS.ADD_TODO:
 	      return _Todo2.default.fromJS({
-	        id: action.id,
-	        text: action.text
+	        id: action.payload.id,
+	        text: action.payload.text
 	      });
 	    case _constants.TODO_ACTIONS.TOGGLE_TODO:
-	      if (state.id !== action.id) {
+	      if (state.id !== action.payload.id) {
 	        return state;
 	      }
 	      return state.set('completed', !state.completed);
@@ -41625,7 +41631,7 @@
 	
 	  switch (action.type) {
 	    case _constants.TODO_FILETER_ACTIONS.SET_VISIBILITY_FILTER:
-	      return action.filter;
+	      return action.payload.filter;
 	    default:
 	      return state;
 	  }
