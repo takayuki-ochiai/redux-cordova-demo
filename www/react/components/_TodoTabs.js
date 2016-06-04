@@ -6,8 +6,6 @@ import { TODO_FILETER_ACTIONS } from '../actions/constants'
 
 const greyBackground = { backgroundColor: grey700 }
 
-// stateを聴講しているわけではないし、コンポーネントとしても十分小さいので現状はContainerとComponentは分けない
-// 今後Componentが肥大化して見通しが悪くなった場合は分離する
 export default class TodoTabs extends Component {
   constructor(props) {
     super(props)
@@ -15,7 +13,7 @@ export default class TodoTabs extends Component {
   }
 
   onActive(event) {
-    this.props.dispatch(setVisibilityFilter(event.props.filter))
+    this.props.onActive(event.props.filter)
   }
 
   render() {
@@ -30,5 +28,5 @@ export default class TodoTabs extends Component {
 }
 
 TodoTabs.propTypes = {
-  dispatch: PropTypes.func.isRequired
+  onActive: PropTypes.func.isRequired
 }

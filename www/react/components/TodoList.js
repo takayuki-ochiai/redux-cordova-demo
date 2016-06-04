@@ -6,6 +6,11 @@ import { List }from 'material-ui/List'
 class TodoList extends Component {
   constructor(props) {
     super(props);
+    this.onClickTodoItem = this.onClickTodoItem.bind(this)
+  }
+
+  onClickTodoItem(id) {
+    this.props.onTodoClick(id)
   }
 
   render() {
@@ -16,7 +21,7 @@ class TodoList extends Component {
             key={todo.id}
             completed={todo.completed}
             text={todo.text}
-            onClick={() => this.props.onTodoClick(todo.id)}
+            onClick={() => {this.onClickTodoItem(todo.id)}}
           />
         )}
       </List>

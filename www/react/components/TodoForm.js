@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { spring, Motion } from 'react-motion'
-import { push } from 'react-router-redux'
 
 import TextField from 'material-ui/TextField'
 import AppBar from 'material-ui/AppBar'
@@ -9,7 +8,6 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close'
 import ActionDone from 'material-ui/svg-icons/action/done'
 import { grey800, white, grey300, red300, green300 } from 'material-ui/styles/colors'
 
-import { addTodo, toggleAddTodoComponent } from '../actions'
 import styles from '../../stylesheet/todoForm.css'
 
 class AddTodo extends Component {
@@ -50,7 +48,7 @@ class AddTodo extends Component {
   }
 
   onTapCloseIcon() {
-    this.props.dispatch(toggleAddTodoComponent())
+    this.props.onTapCloseIcon()
   }
 
   onTapDoneIcon() {
@@ -60,15 +58,15 @@ class AddTodo extends Component {
     // Todo画面へページ遷移する
     // TodoFormを消す
     if (this.state.value.trim()) {
-      this.props.dispatch(addTodo(this.state.value))
+      let value = this.state.value
       this.setState({
         value: ''
       })
-      this.props.dispatch(push('/'))
+      this.props.onTapDoneIconSuccess(value)
+    } else {
+      // できなかったらFormを消すだけ
+      this.props.onTapDoneIconFailure()
     }
-
-    // できなかったらFormを消すだけ
-    this.props.dispatch(toggleAddTodoComponent())
   }
 
   render() {
@@ -97,7 +95,9 @@ class AddTodo extends Component {
 }
 
 AddTodo.propTypes = {
-  dispatch: PropTypes.func.isRequired,
+  onTapCloseIcon: PropTypes.func.isRequired,
+  onTapDoneIconSuccess: PropTypes.func.isRequired,
+  onTapDoneIconFailure: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired
 }
 

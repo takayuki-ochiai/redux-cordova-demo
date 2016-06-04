@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e77e534124862a3b4440"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7ede93f45255d18ccbc0"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -40588,8 +40588,6 @@
 	
 	var _reactMotion = __webpack_require__(/*! react-motion */ 154);
 	
-	var _reactRouterRedux = __webpack_require__(/*! react-router-redux */ 49);
-	
 	var _TextField = __webpack_require__(/*! material-ui/TextField */ 307);
 	
 	var _TextField2 = _interopRequireDefault(_TextField);
@@ -40611,8 +40609,6 @@
 	var _done2 = _interopRequireDefault(_done);
 	
 	var _colors = __webpack_require__(/*! material-ui/styles/colors */ 38);
-	
-	var _actions = __webpack_require__(/*! ../actions */ 62);
 	
 	var _todoForm = __webpack_require__(/*! ../../stylesheet/todoForm.css */ 495);
 	
@@ -40675,7 +40671,7 @@
 	  }, {
 	    key: 'onTapCloseIcon',
 	    value: function onTapCloseIcon() {
-	      this.props.dispatch((0, _actions.toggleAddTodoComponent)());
+	      this.props.onTapCloseIcon();
 	    }
 	  }, {
 	    key: 'onTapDoneIcon',
@@ -40686,15 +40682,15 @@
 	      // Todo画面へページ遷移する
 	      // TodoFormを消す
 	      if (this.state.value.trim()) {
-	        this.props.dispatch((0, _actions.addTodo)(this.state.value));
+	        var value = this.state.value;
 	        this.setState({
 	          value: ''
 	        });
-	        this.props.dispatch((0, _reactRouterRedux.push)('/'));
+	        this.props.onTapDoneIconSuccess(value);
+	      } else {
+	        // できなかったらFormを消すだけ
+	        this.props.onTapDoneIconFailure();
 	      }
-	
-	      // できなかったらFormを消すだけ
-	      this.props.dispatch((0, _actions.toggleAddTodoComponent)());
 	    }
 	  }, {
 	    key: 'render',
@@ -40745,7 +40741,9 @@
 	}(_react.Component);
 	
 	AddTodo.propTypes = {
-	  dispatch: _react.PropTypes.func.isRequired,
+	  onTapCloseIcon: _react.PropTypes.func.isRequired,
+	  onTapDoneIconSuccess: _react.PropTypes.func.isRequired,
+	  onTapDoneIconFailure: _react.PropTypes.func.isRequired,
 	  open: _react.PropTypes.bool.isRequired
 	};
 	
@@ -40797,10 +40795,18 @@
 	  function TodoList(props) {
 	    _classCallCheck(this, TodoList);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(TodoList).call(this, props));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TodoList).call(this, props));
+	
+	    _this.onClickTodoItem = _this.onClickTodoItem.bind(_this);
+	    return _this;
 	  }
 	
 	  _createClass(TodoList, [{
+	    key: 'onClickTodoItem',
+	    value: function onClickTodoItem(id) {
+	      this.props.onTodoClick(id);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
@@ -40814,7 +40820,7 @@
 	            completed: todo.completed,
 	            text: todo.text,
 	            onClick: function onClick() {
-	              return _this2.props.onTodoClick(todo.id);
+	              _this2.onClickTodoItem(todo.id);
 	            }
 	          });
 	        })
@@ -40874,9 +40880,6 @@
 	
 	var greyBackground = { backgroundColor: _colors.grey700 };
 	
-	// stateを聴講しているわけではないし、コンポーネントとしても十分小さいので現状はContainerとComponentは分けない
-	// 今後Componentが肥大化して見通しが悪くなった場合は分離する
-	
 	var TodoTabs = function (_Component) {
 	  _inherits(TodoTabs, _Component);
 	
@@ -40892,7 +40895,7 @@
 	  _createClass(TodoTabs, [{
 	    key: 'onActive',
 	    value: function onActive(event) {
-	      this.props.dispatch((0, _actions.setVisibilityFilter)(event.props.filter));
+	      this.props.onActive(event.props.filter);
 	    }
 	  }, {
 	    key: 'render',
@@ -40914,7 +40917,7 @@
 	
 	
 	TodoTabs.propTypes = {
-	  dispatch: _react.PropTypes.func.isRequired
+	  onActive: _react.PropTypes.func.isRequired
 	};
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(/*! ./~/react-hot-loader/makeExportsHot.js */ 11); if (makeExportsHot(module, __webpack_require__(/*! react */ 1))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "_TodoTabs.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
@@ -40937,9 +40940,13 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 40);
 	
+	var _reactRouterRedux = __webpack_require__(/*! react-router-redux */ 49);
+	
 	var _TodoForm = __webpack_require__(/*! ../components/TodoForm */ 349);
 	
 	var _TodoForm2 = _interopRequireDefault(_TodoForm);
+	
+	var _actions = __webpack_require__(/*! ../actions */ 62);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -40949,7 +40956,23 @@
 	  };
 	};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps)(_TodoForm2.default);
+	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	  return {
+	    onTapCloseIcon: function onTapCloseIcon() {
+	      dispatch((0, _actions.toggleAddTodoComponent)());
+	    },
+	    onTapDoneIconSuccess: function onTapDoneIconSuccess(value) {
+	      dispatch((0, _actions.addTodo)(value));
+	      dispatch((0, _reactRouterRedux.push)('/'));
+	      dispatch((0, _actions.toggleAddTodoComponent)());
+	    },
+	    onTapDoneIconFailure: function onTapDoneIconFailure() {
+	      dispatch((0, _actions.toggleAddTodoComponent)());
+	    }
+	  };
+	};
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_TodoForm2.default);
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(/*! ./~/react-hot-loader/makeExportsHot.js */ 11); if (makeExportsHot(module, __webpack_require__(/*! react */ 1))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "AddTodo.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../~/webpack/buildin/module.js */ 5)(module)))
@@ -41020,26 +41043,26 @@
 	
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Footer).call(this, props));
 	
-	    _this.onActiveTab = _this.onActiveTab.bind(_this);
-	    _this.onActiveTab2 = _this.onActiveTab2.bind(_this);
+	    _this.onActiveHomeTab = _this.onActiveHomeTab.bind(_this);
+	    _this.onActiveHelpTap = _this.onActiveHelpTap.bind(_this);
 	    _this.onTouchTapFab = _this.onTouchTapFab.bind(_this);
 	    return _this;
 	  }
 	
 	  _createClass(Footer, [{
-	    key: 'onActiveTab2',
-	    value: function onActiveTab2(event) {
-	      this.props.dispatch((0, _actions.transitionSlideRight)(event.props.path));
+	    key: 'onActiveHomeTab',
+	    value: function onActiveHomeTab(event) {
+	      this.props.onActiveHomeTab(event.props.path);
 	    }
 	  }, {
-	    key: 'onActiveTab',
-	    value: function onActiveTab(event) {
-	      this.props.dispatch((0, _actions.transitionSlideLeft)(event.props.path));
+	    key: 'onActiveHelpTap',
+	    value: function onActiveHelpTap(event) {
+	      this.props.onActiveHelpTap(event.props.path);
 	    }
 	  }, {
 	    key: 'onTouchTapFab',
 	    value: function onTouchTapFab() {
-	      this.props.dispatch((0, _actions.toggleAddTodoComponent)());
+	      this.props.onTouchTapFab();
 	    }
 	  }, {
 	    key: 'render',
@@ -41059,8 +41082,8 @@
 	        _react2.default.createElement(
 	          _Tabs.Tabs,
 	          null,
-	          _react2.default.createElement(_Tabs.Tab, { icon: _react2.default.createElement(_home2.default, null), onActive: this.onActiveTab, path: '/' }),
-	          _react2.default.createElement(_Tabs.Tab, { icon: _react2.default.createElement(_help2.default, null), onActive: this.onActiveTab2, path: '/about' })
+	          _react2.default.createElement(_Tabs.Tab, { icon: _react2.default.createElement(_home2.default, null), onActive: this.onActiveHomeTab, path: '/' }),
+	          _react2.default.createElement(_Tabs.Tab, { icon: _react2.default.createElement(_help2.default, null), onActive: this.onActiveHelpTap, path: '/about' })
 	        )
 	      );
 	    }
@@ -41069,11 +41092,27 @@
 	  return Footer;
 	}(_react.Component);
 	
-	Footer.propTypes = {
-	  dispatch: _react.PropTypes.func.isRequired
+	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	  return {
+	    onActiveHomeTab: function onActiveHomeTab(path) {
+	      dispatch((0, _actions.transitionSlideLeft)(path));
+	    },
+	    onActiveHelpTap: function onActiveHelpTap(path) {
+	      dispatch((0, _actions.transitionSlideRight)(path));
+	    },
+	    onTouchTapFab: function onTouchTapFab() {
+	      dispatch((0, _actions.toggleAddTodoComponent)());
+	    }
+	  };
 	};
 	
-	exports.default = (0, _reactRedux.connect)()(Footer);
+	Footer.propTypes = {
+	  onActiveHomeTab: _react.PropTypes.func.isRequired,
+	  onActiveHelpTap: _react.PropTypes.func.isRequired,
+	  onTouchTapFab: _react.PropTypes.func.isRequired
+	};
+	
+	exports.default = (0, _reactRedux.connect)(null, mapDispatchToProps)(Footer);
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(/*! ./~/react-hot-loader/makeExportsHot.js */ 11); if (makeExportsHot(module, __webpack_require__(/*! react */ 1))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Footer.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../~/webpack/buildin/module.js */ 5)(module)))
@@ -41135,9 +41174,19 @@
 	
 	var _TodoTabs3 = _interopRequireDefault(_TodoTabs2);
 	
+	var _actions = __webpack_require__(/*! ../actions */ 62);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = (0, _reactRedux.connect)()(_TodoTabs3.default);
+	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	  return {
+	    onActive: function onActive(filter) {
+	      dispatch((0, _actions.setVisibilityFilter)(filter));
+	    }
+	  };
+	};
+	
+	exports.default = (0, _reactRedux.connect)(null, mapDispatchToProps)(_TodoTabs3.default);
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(/*! ./~/react-hot-loader/makeExportsHot.js */ 11); if (makeExportsHot(module, __webpack_require__(/*! react */ 1))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TodoTabs.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../~/webpack/buildin/module.js */ 5)(module)))

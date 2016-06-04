@@ -13,21 +13,21 @@ import { transitionSlideLeft, transitionSlideRight, toggleAddTodoComponent } fro
 class Footer extends Component {
   constructor(props) {
     super(props)
-    this.onActiveTab = this.onActiveTab.bind(this)
-    this.onActiveTab2 = this.onActiveTab2.bind(this)
+    this.onActiveHomeTab = this.onActiveHomeTab.bind(this)
+    this.onActiveHelpTap = this.onActiveHelpTap.bind(this)
     this.onTouchTapFab = this.onTouchTapFab.bind(this)
   }
 
-  onActiveTab2(event) {
-    this.props.dispatch(transitionSlideRight(event.props.path))
+  onActiveHomeTab(event) {
+    this.props.onActiveHomeTab(event.props.path)
   }
 
-  onActiveTab(event) {
-    this.props.dispatch(transitionSlideLeft(event.props.path))
+  onActiveHelpTap(event) {
+    this.props.onActiveHelpTap(event.props.path)
   }
 
   onTouchTapFab() {
-    this.props.dispatch(toggleAddTodoComponent())
+    this.props.onTouchTapFab()
   }
 
   render() {
@@ -39,16 +39,32 @@ class Footer extends Component {
           </FloatingActionButton>
         </div>
         <Tabs>
-          <Tab icon={<ActionHome />} onActive={this.onActiveTab} path="/" />
-          <Tab icon={<ActionHelp />} onActive={this.onActiveTab2} path="/about" />
+          <Tab icon={<ActionHome />} onActive={this.onActiveHomeTab} path="/" />
+          <Tab icon={<ActionHelp />} onActive={this.onActiveHelpTap} path="/about" />
         </Tabs>
       </div>
     );
   }
 }
 
-Footer.propTypes = {
-  dispatch: PropTypes.func.isRequired
+const mapDispatchToProps = dispatch => {
+  return {
+    onActiveHomeTab: path => {
+      dispatch(transitionSlideLeft(path))
+    },
+    onActiveHelpTap: path => {
+      dispatch(transitionSlideRight(path))
+    },
+    onTouchTapFab: () => {
+      dispatch(toggleAddTodoComponent())
+    }
+  }
 }
 
-export default connect()(Footer)
+Footer.propTypes = {
+  onActiveHomeTab: PropTypes.func.isRequired,
+  onActiveHelpTap: PropTypes.func.isRequired,
+  onTouchTapFab: PropTypes.func.isRequired
+}
+
+export default connect(null, mapDispatchToProps)(Footer)
